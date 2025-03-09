@@ -346,8 +346,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -381,8 +381,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -416,8 +416,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -451,8 +451,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -486,8 +486,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -511,6 +511,7 @@ The results obtained for Protocol 1 are hereby reported:
 </table>
 <br>
 
+
 #### Protocol 1 Discussion
 
 The results from Protocol 1 demonstrate that the device performs best when the accelerometer is placed on the abdomen while the subject is sitting, as indicated by the lowest MSE, MAE, RMSE, and standard deviation. This suggests that the abdomen placement is more stable and less affected by external movements compared to the chest placement. However, it is important to highlight that, despite the abdomen placement showing superior stability, the chest placement also performed well and remains a viable option.
@@ -529,8 +530,8 @@ The results obtained for Protocol 2 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -559,13 +560,13 @@ The results obtained for Protocol 2 are hereby reported:
 <table>
     <tr>
         <td>
-            <img src="Images/p2_o2.png" alt="p2_02" style="margin-right: 20px;" />
+            <img src="Images/p2_o2.png" alt="p2_o2" style="margin-right: 20px;" />
         </td>
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -599,8 +600,8 @@ The results obtained for Protocol 2 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -634,8 +635,8 @@ The results obtained for Protocol 2 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -669,8 +670,8 @@ The results obtained for Protocol 2 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -694,6 +695,7 @@ The results obtained for Protocol 2 are hereby reported:
 </table>
 <br>
 
+
 ### Protocol 2 Discussion
 
 Similar to Protocol 1, the results from Protocol 2 indicate that the device provides more accurate measurements when the accelerometer is placed on the abdomen, particularly when the subject is sitting. The highest errors are observed when the accelerometer is placed on the chest while standing, suggesting higher variability and potential interference from body movements, as it is possible to see from the two outliers seen in Option 1 chart.
@@ -712,8 +714,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -732,10 +734,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.91</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -769,8 +771,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -789,10 +791,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.72</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -826,8 +828,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -846,10 +848,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.68</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -883,8 +885,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -903,10 +905,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.96</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -940,8 +942,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -960,10 +962,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.88</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -986,6 +988,7 @@ The results obtained for Protocol 3 are hereby reported:
     </tr>
 </table>
 <br>
+
 
 ### Protocol 3 Discussion
 
@@ -1011,8 +1014,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1046,8 +1049,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1081,8 +1084,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1116,8 +1119,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1151,8 +1154,8 @@ The results obtained for Protocol 1 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1194,8 +1197,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1214,10 +1217,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.49</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1251,8 +1254,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1271,10 +1274,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.49</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1308,8 +1311,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1328,10 +1331,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.49</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1365,8 +1368,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1385,10 +1388,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.49</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1422,8 +1425,8 @@ The results obtained for Protocol 3 are hereby reported:
         <td>
             <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>
@@ -1442,10 +1445,10 @@ The results obtained for Protocol 3 are hereby reported:
                     <td>0.5</td>
                 </tr>
             </table>
-                        <table border="1">
+            <table border="1">
                 <tr>
-                    <th>Misura</th>
-                    <th>Valore</th>
+                    <th>Measure</th>
+                    <th>Value (breaths/min)</th>
                 </tr>
                 <tr>
                     <td>MSE</td>

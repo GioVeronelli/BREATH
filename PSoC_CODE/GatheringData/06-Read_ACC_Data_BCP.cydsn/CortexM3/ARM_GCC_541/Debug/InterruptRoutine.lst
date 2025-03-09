@@ -1,0 +1,1626 @@
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"InterruptRoutine.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Custom_ISR_RX,"ax",%progbits
+  20              		.align	2
+  21              		.global	Custom_ISR_RX
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Custom_ISR_RX, %function
+  25              	Custom_ISR_RX:
+  26              	.LFB64:
+  27              		.file 1 "InterruptRoutine.c"
+   1:InterruptRoutine.c **** 
+   2:InterruptRoutine.c **** #include "InterruptRoutine.h"
+   3:InterruptRoutine.c **** 
+   4:InterruptRoutine.c **** 
+   5:InterruptRoutine.c **** int16_t OutData;
+   6:InterruptRoutine.c **** uint8_t Acc_Data[2];
+   7:InterruptRoutine.c **** uint8_t ZYX_DA;
+   8:InterruptRoutine.c **** uint8_t ZYX_OR;
+   9:InterruptRoutine.c **** uint8_t status_reg;
+  10:InterruptRoutine.c **** float g = 9.81;
+  11:InterruptRoutine.c **** char ch_received;
+  12:InterruptRoutine.c **** char start_stream;
+  13:InterruptRoutine.c **** 
+  14:InterruptRoutine.c **** CY_ISR(Custom_ISR_RX)
+  15:InterruptRoutine.c **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  16:InterruptRoutine.c ****     ch_received = UART_1_GetChar(); 
+  36              		.loc 1 16 0
+  37 0002 FFF7FEFF 		bl	UART_1_GetChar
+  38              	.LVL0:
+  39 0006 2F4B     		ldr	r3, .L11
+  40 0008 1870     		strb	r0, [r3]
+  17:InterruptRoutine.c ****     switch(ch_received)
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 2
+
+
+  41              		.loc 1 17 0
+  42 000a 6238     		subs	r0, r0, #98
+  43 000c 1428     		cmp	r0, #20
+  44 000e 58D8     		bhi	.L1
+  45 0010 DFE800F0 		tbb	[pc, r0]
+  46              	.L4:
+  47 0014 27       		.byte	(.L3-.L4)/2
+  48 0015 57       		.byte	(.L1-.L4)/2
+  49 0016 4C       		.byte	(.L5-.L4)/2
+  50 0017 57       		.byte	(.L1-.L4)/2
+  51 0018 57       		.byte	(.L1-.L4)/2
+  52 0019 57       		.byte	(.L1-.L4)/2
+  53 001a 57       		.byte	(.L1-.L4)/2
+  54 001b 57       		.byte	(.L1-.L4)/2
+  55 001c 57       		.byte	(.L1-.L4)/2
+  56 001d 57       		.byte	(.L1-.L4)/2
+  57 001e 57       		.byte	(.L1-.L4)/2
+  58 001f 57       		.byte	(.L1-.L4)/2
+  59 0020 57       		.byte	(.L1-.L4)/2
+  60 0021 3F       		.byte	(.L6-.L4)/2
+  61 0022 57       		.byte	(.L1-.L4)/2
+  62 0023 57       		.byte	(.L1-.L4)/2
+  63 0024 57       		.byte	(.L1-.L4)/2
+  64 0025 0B       		.byte	(.L7-.L4)/2
+  65 0026 33       		.byte	(.L8-.L4)/2
+  66 0027 57       		.byte	(.L1-.L4)/2
+  67 0028 1A       		.byte	(.L9-.L4)/2
+  68 0029 00       		.p2align 1
+  69              	.L7:
+  18:InterruptRoutine.c ****     {
+  19:InterruptRoutine.c ****         case 's':
+  20:InterruptRoutine.c ****             PWM_LED_Stop();
+  70              		.loc 1 20 0
+  71 002a FFF7FEFF 		bl	PWM_LED_Stop
+  72              	.LVL1:
+  21:InterruptRoutine.c ****             LED_G_Write(HIGH);
+  73              		.loc 1 21 0
+  74 002e 0120     		movs	r0, #1
+  75 0030 FFF7FEFF 		bl	LED_G_Write
+  76              	.LVL2:
+  22:InterruptRoutine.c ****             LED_B_Write(LOW);
+  77              		.loc 1 22 0
+  78 0034 0020     		movs	r0, #0
+  79 0036 FFF7FEFF 		bl	LED_B_Write
+  80              	.LVL3:
+  23:InterruptRoutine.c ****             BUZZER_Write(LOW);
+  81              		.loc 1 23 0
+  82 003a 0020     		movs	r0, #0
+  83 003c FFF7FEFF 		bl	BUZZER_Write
+  84              	.LVL4:
+  24:InterruptRoutine.c ****             start_stream=1;
+  85              		.loc 1 24 0
+  86 0040 0122     		movs	r2, #1
+  87 0042 214B     		ldr	r3, .L11+4
+  88 0044 1A70     		strb	r2, [r3]
+  25:InterruptRoutine.c ****             break;
+  89              		.loc 1 25 0
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 3
+
+
+  90 0046 08BD     		pop	{r3, pc}
+  91              	.L9:
+  26:InterruptRoutine.c ****         
+  27:InterruptRoutine.c ****         case 'v':
+  28:InterruptRoutine.c ****             LED_G_Write(LOW);
+  92              		.loc 1 28 0
+  93 0048 0020     		movs	r0, #0
+  94 004a FFF7FEFF 		bl	LED_G_Write
+  95              	.LVL5:
+  29:InterruptRoutine.c ****             LED_B_Write(HIGH);
+  96              		.loc 1 29 0
+  97 004e 0120     		movs	r0, #1
+  98 0050 FFF7FEFF 		bl	LED_B_Write
+  99              	.LVL6:
+  30:InterruptRoutine.c ****             BUZZER_Write(LOW);
+ 100              		.loc 1 30 0
+ 101 0054 0020     		movs	r0, #0
+ 102 0056 FFF7FEFF 		bl	BUZZER_Write
+ 103              	.LVL7:
+  31:InterruptRoutine.c ****             start_stream=0;
+ 104              		.loc 1 31 0
+ 105 005a 0022     		movs	r2, #0
+ 106 005c 1A4B     		ldr	r3, .L11+4
+ 107 005e 1A70     		strb	r2, [r3]
+  32:InterruptRoutine.c ****             break;
+ 108              		.loc 1 32 0
+ 109 0060 08BD     		pop	{r3, pc}
+ 110              	.L3:
+  33:InterruptRoutine.c ****             
+  34:InterruptRoutine.c ****         case 'b':
+  35:InterruptRoutine.c ****             BUZZER_Write(HIGH);
+ 111              		.loc 1 35 0
+ 112 0062 0120     		movs	r0, #1
+ 113 0064 FFF7FEFF 		bl	BUZZER_Write
+ 114              	.LVL8:
+  36:InterruptRoutine.c ****             PWM_LED_Start();
+ 115              		.loc 1 36 0
+ 116 0068 FFF7FEFF 		bl	PWM_LED_Start
+ 117              	.LVL9:
+  37:InterruptRoutine.c ****             LED_G_Write(LOW);
+ 118              		.loc 1 37 0
+ 119 006c 0020     		movs	r0, #0
+ 120 006e FFF7FEFF 		bl	LED_G_Write
+ 121              	.LVL10:
+  38:InterruptRoutine.c ****             LED_B_Write(LOW);
+ 122              		.loc 1 38 0
+ 123 0072 0020     		movs	r0, #0
+ 124 0074 FFF7FEFF 		bl	LED_B_Write
+ 125              	.LVL11:
+  39:InterruptRoutine.c ****             break;
+ 126              		.loc 1 39 0
+ 127 0078 08BD     		pop	{r3, pc}
+ 128              	.L8:
+  40:InterruptRoutine.c **** 
+  41:InterruptRoutine.c ****         case 't':
+  42:InterruptRoutine.c ****             LED_B_Write(HIGH);
+ 129              		.loc 1 42 0
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 4
+
+
+ 130 007a 0120     		movs	r0, #1
+ 131 007c FFF7FEFF 		bl	LED_B_Write
+ 132              	.LVL12:
+  43:InterruptRoutine.c ****             PWM_LED_Stop();
+ 133              		.loc 1 43 0
+ 134 0080 FFF7FEFF 		bl	PWM_LED_Stop
+ 135              	.LVL13:
+  44:InterruptRoutine.c ****             BUZZER_Write(LOW);
+ 136              		.loc 1 44 0
+ 137 0084 0020     		movs	r0, #0
+ 138 0086 FFF7FEFF 		bl	BUZZER_Write
+ 139              	.LVL14:
+  45:InterruptRoutine.c ****             LED_G_Write(LOW);
+ 140              		.loc 1 45 0
+ 141 008a 0020     		movs	r0, #0
+ 142 008c FFF7FEFF 		bl	LED_G_Write
+ 143              	.LVL15:
+  46:InterruptRoutine.c ****             break;
+ 144              		.loc 1 46 0
+ 145 0090 08BD     		pop	{r3, pc}
+ 146              	.L6:
+  47:InterruptRoutine.c ****             
+  48:InterruptRoutine.c ****         case 'o':
+  49:InterruptRoutine.c ****             LED_B_Write(LOW);
+ 147              		.loc 1 49 0
+ 148 0092 0020     		movs	r0, #0
+ 149 0094 FFF7FEFF 		bl	LED_B_Write
+ 150              	.LVL16:
+  50:InterruptRoutine.c ****             LED_R_Write(LOW);
+ 151              		.loc 1 50 0
+ 152 0098 0020     		movs	r0, #0
+ 153 009a FFF7FEFF 		bl	LED_R_Write
+ 154              	.LVL17:
+  51:InterruptRoutine.c ****             BUZZER_Write(LOW);
+ 155              		.loc 1 51 0
+ 156 009e 0020     		movs	r0, #0
+ 157 00a0 FFF7FEFF 		bl	BUZZER_Write
+ 158              	.LVL18:
+  52:InterruptRoutine.c ****             LED_G_Write(HIGH);
+ 159              		.loc 1 52 0
+ 160 00a4 0120     		movs	r0, #1
+ 161 00a6 FFF7FEFF 		bl	LED_G_Write
+ 162              	.LVL19:
+  53:InterruptRoutine.c ****             break;
+ 163              		.loc 1 53 0
+ 164 00aa 08BD     		pop	{r3, pc}
+ 165              	.L5:
+  54:InterruptRoutine.c ****             
+  55:InterruptRoutine.c ****         case 'd':
+  56:InterruptRoutine.c ****             PWM_LED_Start();
+ 166              		.loc 1 56 0
+ 167 00ac FFF7FEFF 		bl	PWM_LED_Start
+ 168              	.LVL20:
+  57:InterruptRoutine.c ****             LED_G_Write(LOW);
+ 169              		.loc 1 57 0
+ 170 00b0 0020     		movs	r0, #0
+ 171 00b2 FFF7FEFF 		bl	LED_G_Write
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 5
+
+
+ 172              	.LVL21:
+  58:InterruptRoutine.c ****             LED_B_Write(LOW);
+ 173              		.loc 1 58 0
+ 174 00b6 0020     		movs	r0, #0
+ 175 00b8 FFF7FEFF 		bl	LED_B_Write
+ 176              	.LVL22:
+  59:InterruptRoutine.c ****             BUZZER_Write(LOW);
+ 177              		.loc 1 59 0
+ 178 00bc 0020     		movs	r0, #0
+ 179 00be FFF7FEFF 		bl	BUZZER_Write
+ 180              	.LVL23:
+ 181              	.L1:
+ 182 00c2 08BD     		pop	{r3, pc}
+ 183              	.L12:
+ 184              		.align	2
+ 185              	.L11:
+ 186 00c4 00000000 		.word	ch_received
+ 187 00c8 00000000 		.word	start_stream
+ 188              		.cfi_endproc
+ 189              	.LFE64:
+ 190              		.size	Custom_ISR_RX, .-Custom_ISR_RX
+ 191              		.section	.text.Custom_ISR_Data,"ax",%progbits
+ 192              		.align	2
+ 193              		.global	Custom_ISR_Data
+ 194              		.thumb
+ 195              		.thumb_func
+ 196              		.type	Custom_ISR_Data, %function
+ 197              	Custom_ISR_Data:
+ 198              	.LFB65:
+  60:InterruptRoutine.c ****             break;
+  61:InterruptRoutine.c ****                 
+  62:InterruptRoutine.c ****     }
+  63:InterruptRoutine.c **** }        
+  64:InterruptRoutine.c ****         
+  65:InterruptRoutine.c **** CY_ISR(Custom_ISR_Data)
+  66:InterruptRoutine.c **** {
+ 199              		.loc 1 66 0
+ 200              		.cfi_startproc
+ 201              		@ args = 0, pretend = 0, frame = 0
+ 202              		@ frame_needed = 0, uses_anonymous_args = 0
+ 203 0000 10B5     		push	{r4, lr}
+ 204              		.cfi_def_cfa_offset 8
+ 205              		.cfi_offset 4, -8
+ 206              		.cfi_offset 14, -4
+  67:InterruptRoutine.c ****     
+  68:InterruptRoutine.c ****     ErrorCode error = I2C_Peripheral_UReadRegister(LIS3DH_DEVICE_ADDRESS,LIS3DH_STATUS_REG,&status_
+ 207              		.loc 1 68 0
+ 208 0002 174A     		ldr	r2, .L17
+ 209 0004 2721     		movs	r1, #39
+ 210 0006 1820     		movs	r0, #24
+ 211 0008 FFF7FEFF 		bl	I2C_Peripheral_UReadRegister
+ 212              	.LVL24:
+  69:InterruptRoutine.c ****     
+  70:InterruptRoutine.c ****     if (error == NO_ERROR)
+ 213              		.loc 1 70 0
+ 214 000c 38BB     		cbnz	r0, .L13
+  71:InterruptRoutine.c ****     { 
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 6
+
+
+  72:InterruptRoutine.c ****         ZYX_DA = status_reg & (0b00001000); 
+ 215              		.loc 1 72 0
+ 216 000e 144B     		ldr	r3, .L17
+ 217 0010 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 218 0012 02F00803 		and	r3, r2, #8
+ 219 0016 DBB2     		uxtb	r3, r3
+ 220 0018 1249     		ldr	r1, .L17+4
+ 221 001a 0B70     		strb	r3, [r1]
+  73:InterruptRoutine.c ****         ZYX_OR = status_reg &  (0b10000000);
+ 222              		.loc 1 73 0
+ 223 001c 22F07F02 		bic	r2, r2, #127
+ 224 0020 1149     		ldr	r1, .L17+8
+ 225 0022 0A70     		strb	r2, [r1]
+  74:InterruptRoutine.c ****  
+  75:InterruptRoutine.c ****         if(ZYX_DA == LIS3DH_STATUS_REG_ZYX_DA_1)
+ 226              		.loc 1 75 0
+ 227 0024 DBB1     		cbz	r3, .L13
+  76:InterruptRoutine.c ****         {
+  77:InterruptRoutine.c ****             error = I2C_Peripheral_UReadRegister(LIS3DH_DEVICE_ADDRESS,LIS3DH_OUT_Z_L,&Acc_Data[0])
+ 228              		.loc 1 77 0
+ 229 0026 114C     		ldr	r4, .L17+12
+ 230 0028 2246     		mov	r2, r4
+ 231 002a 2C21     		movs	r1, #44
+ 232 002c 1820     		movs	r0, #24
+ 233              	.LVL25:
+ 234 002e FFF7FEFF 		bl	I2C_Peripheral_UReadRegister
+ 235              	.LVL26:
+  78:InterruptRoutine.c ****             error = I2C_Peripheral_UReadRegister(LIS3DH_DEVICE_ADDRESS,LIS3DH_OUT_Z_H,&Acc_Data[1])
+ 236              		.loc 1 78 0
+ 237 0032 621C     		adds	r2, r4, #1
+ 238 0034 2D21     		movs	r1, #45
+ 239 0036 1820     		movs	r0, #24
+ 240 0038 FFF7FEFF 		bl	I2C_Peripheral_UReadRegister
+ 241              	.LVL27:
+  79:InterruptRoutine.c ****             
+  80:InterruptRoutine.c ****             if(error == NO_ERROR)
+ 242              		.loc 1 80 0
+ 243 003c 60B9     		cbnz	r0, .L15
+  81:InterruptRoutine.c ****             {
+  82:InterruptRoutine.c ****                 DataBuffer[1]=Acc_Data[0];
+ 244              		.loc 1 82 0
+ 245 003e 2178     		ldrb	r1, [r4]	@ zero_extendqisi2
+ 246 0040 0B4B     		ldr	r3, .L17+16
+ 247 0042 5970     		strb	r1, [r3, #1]
+  83:InterruptRoutine.c ****                 DataBuffer[2]=Acc_Data[1];
+ 248              		.loc 1 83 0
+ 249 0044 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
+ 250 0046 9A70     		strb	r2, [r3, #2]
+  84:InterruptRoutine.c ****                 if(start_stream)
+ 251              		.loc 1 84 0
+ 252 0048 0A4B     		ldr	r3, .L17+20
+ 253 004a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 254 004c 3BB1     		cbz	r3, .L13
+  85:InterruptRoutine.c ****                 {
+  86:InterruptRoutine.c ****                     UART_1_PutArray(DataBuffer,TRANSMIT_DATA_BUFFER_SIZE);
+ 255              		.loc 1 86 0
+ 256 004e 0421     		movs	r1, #4
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 7
+
+
+ 257 0050 0748     		ldr	r0, .L17+16
+ 258              	.LVL28:
+ 259 0052 FFF7FEFF 		bl	UART_1_PutArray
+ 260              	.LVL29:
+ 261 0056 10BD     		pop	{r4, pc}
+ 262              	.LVL30:
+ 263              	.L15:
+  87:InterruptRoutine.c ****                 }
+  88:InterruptRoutine.c ****             }
+  89:InterruptRoutine.c ****             else
+  90:InterruptRoutine.c ****             {
+  91:InterruptRoutine.c ****                 UART_1_PutString("Errore");
+ 264              		.loc 1 91 0
+ 265 0058 0748     		ldr	r0, .L17+24
+ 266              	.LVL31:
+ 267 005a FFF7FEFF 		bl	UART_1_PutString
+ 268              	.LVL32:
+ 269              	.L13:
+ 270 005e 10BD     		pop	{r4, pc}
+ 271              	.L18:
+ 272              		.align	2
+ 273              	.L17:
+ 274 0060 00000000 		.word	status_reg
+ 275 0064 00000000 		.word	ZYX_DA
+ 276 0068 00000000 		.word	ZYX_OR
+ 277 006c 00000000 		.word	Acc_Data
+ 278 0070 00000000 		.word	DataBuffer
+ 279 0074 00000000 		.word	start_stream
+ 280 0078 00000000 		.word	.LC0
+ 281              		.cfi_endproc
+ 282              	.LFE65:
+ 283              		.size	Custom_ISR_Data, .-Custom_ISR_Data
+ 284              		.comm	start_stream,1,1
+ 285              		.comm	ch_received,1,1
+ 286              		.global	g
+ 287              		.comm	status_reg,1,1
+ 288              		.comm	ZYX_OR,1,1
+ 289              		.comm	ZYX_DA,1,1
+ 290              		.comm	Acc_Data,2,4
+ 291              		.comm	OutData,2,2
+ 292              		.comm	DataBuffer,4,4
+ 293              		.data
+ 294              		.align	2
+ 295              		.type	g, %object
+ 296              		.size	g, 4
+ 297              	g:
+ 298 0000 C3F51C41 		.word	1092416963
+ 299              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 300              		.align	2
+ 301              	.LC0:
+ 302 0000 4572726F 		.ascii	"Errore\000"
+ 302      726500
+ 303              		.text
+ 304              	.Letext0:
+ 305              		.file 2 "d:\\programmi\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 306              		.file 3 "d:\\programmi\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 307              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 8
+
+
+ 308              		.file 5 "ErrorCodes.h"
+ 309              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 310              		.file 7 "InterruptRoutine.h"
+ 311              		.file 8 "Generated_Source\\PSoC5/UART_1.h"
+ 312              		.file 9 "Generated_Source\\PSoC5/PWM_LED.h"
+ 313              		.file 10 "Generated_Source\\PSoC5/LED_G.h"
+ 314              		.file 11 "Generated_Source\\PSoC5/LED_B.h"
+ 315              		.file 12 "Generated_Source\\PSoC5/BUZZER.h"
+ 316              		.file 13 "Generated_Source\\PSoC5/LED_R.h"
+ 317              		.file 14 "I2C_Interface.h"
+ 318              		.section	.debug_info,"",%progbits
+ 319              	.Ldebug_info0:
+ 320 0000 8F040000 		.4byte	0x48f
+ 321 0004 0400     		.2byte	0x4
+ 322 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 323 000a 04       		.byte	0x4
+ 324 000b 01       		.uleb128 0x1
+ 325 000c 75000000 		.4byte	.LASF45
+ 326 0010 0C       		.byte	0xc
+ 327 0011 25020000 		.4byte	.LASF46
+ 328 0015 B9020000 		.4byte	.LASF47
+ 329 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 330 001d 00000000 		.4byte	0
+ 331 0021 00000000 		.4byte	.Ldebug_line0
+ 332 0025 02       		.uleb128 0x2
+ 333 0026 01       		.byte	0x1
+ 334 0027 06       		.byte	0x6
+ 335 0028 8F020000 		.4byte	.LASF0
+ 336 002c 03       		.uleb128 0x3
+ 337 002d 00000000 		.4byte	.LASF2
+ 338 0031 02       		.byte	0x2
+ 339 0032 1D       		.byte	0x1d
+ 340 0033 37000000 		.4byte	0x37
+ 341 0037 02       		.uleb128 0x2
+ 342 0038 01       		.byte	0x1
+ 343 0039 08       		.byte	0x8
+ 344 003a 67000000 		.4byte	.LASF1
+ 345 003e 03       		.uleb128 0x3
+ 346 003f 15000000 		.4byte	.LASF3
+ 347 0043 02       		.byte	0x2
+ 348 0044 29       		.byte	0x29
+ 349 0045 49000000 		.4byte	0x49
+ 350 0049 02       		.uleb128 0x2
+ 351 004a 02       		.byte	0x2
+ 352 004b 05       		.byte	0x5
+ 353 004c 8C010000 		.4byte	.LASF4
+ 354 0050 02       		.uleb128 0x2
+ 355 0051 02       		.byte	0x2
+ 356 0052 07       		.byte	0x7
+ 357 0053 23010000 		.4byte	.LASF5
+ 358 0057 03       		.uleb128 0x3
+ 359 0058 1F000000 		.4byte	.LASF6
+ 360 005c 02       		.byte	0x2
+ 361 005d 3F       		.byte	0x3f
+ 362 005e 62000000 		.4byte	0x62
+ 363 0062 02       		.uleb128 0x2
+ 364 0063 04       		.byte	0x4
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 9
+
+
+ 365 0064 05       		.byte	0x5
+ 366 0065 46000000 		.4byte	.LASF7
+ 367 0069 02       		.uleb128 0x2
+ 368 006a 04       		.byte	0x4
+ 369 006b 07       		.byte	0x7
+ 370 006c 11010000 		.4byte	.LASF8
+ 371 0070 02       		.uleb128 0x2
+ 372 0071 08       		.byte	0x8
+ 373 0072 05       		.byte	0x5
+ 374 0073 17020000 		.4byte	.LASF9
+ 375 0077 02       		.uleb128 0x2
+ 376 0078 08       		.byte	0x8
+ 377 0079 07       		.byte	0x7
+ 378 007a B9010000 		.4byte	.LASF10
+ 379 007e 04       		.uleb128 0x4
+ 380 007f 04       		.byte	0x4
+ 381 0080 05       		.byte	0x5
+ 382 0081 696E7400 		.ascii	"int\000"
+ 383 0085 02       		.uleb128 0x2
+ 384 0086 04       		.byte	0x4
+ 385 0087 07       		.byte	0x7
+ 386 0088 AC010000 		.4byte	.LASF11
+ 387 008c 03       		.uleb128 0x3
+ 388 008d D0010000 		.4byte	.LASF12
+ 389 0091 03       		.byte	0x3
+ 390 0092 18       		.byte	0x18
+ 391 0093 2C000000 		.4byte	0x2c
+ 392 0097 03       		.uleb128 0x3
+ 393 0098 D8010000 		.4byte	.LASF13
+ 394 009c 03       		.byte	0x3
+ 395 009d 20       		.byte	0x20
+ 396 009e 3E000000 		.4byte	0x3e
+ 397 00a2 03       		.uleb128 0x3
+ 398 00a3 59000000 		.4byte	.LASF14
+ 399 00a7 03       		.byte	0x3
+ 400 00a8 2C       		.byte	0x2c
+ 401 00a9 57000000 		.4byte	0x57
+ 402 00ad 05       		.uleb128 0x5
+ 403 00ae 5E020000 		.4byte	.LASF15
+ 404 00b2 04       		.byte	0x4
+ 405 00b3 E801     		.2byte	0x1e8
+ 406 00b5 37000000 		.4byte	0x37
+ 407 00b9 02       		.uleb128 0x2
+ 408 00ba 04       		.byte	0x4
+ 409 00bb 04       		.byte	0x4
+ 410 00bc 61000000 		.4byte	.LASF16
+ 411 00c0 02       		.uleb128 0x2
+ 412 00c1 08       		.byte	0x8
+ 413 00c2 04       		.byte	0x4
+ 414 00c3 85010000 		.4byte	.LASF17
+ 415 00c7 02       		.uleb128 0x2
+ 416 00c8 01       		.byte	0x1
+ 417 00c9 08       		.byte	0x8
+ 418 00ca 73020000 		.4byte	.LASF18
+ 419 00ce 06       		.uleb128 0x6
+ 420 00cf 01       		.byte	0x1
+ 421 00d0 37000000 		.4byte	0x37
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 10
+
+
+ 422 00d4 05       		.byte	0x5
+ 423 00d5 15       		.byte	0x15
+ 424 00d6 E7000000 		.4byte	0xe7
+ 425 00da 07       		.uleb128 0x7
+ 426 00db 64020000 		.4byte	.LASF19
+ 427 00df 00       		.byte	0
+ 428 00e0 07       		.uleb128 0x7
+ 429 00e1 6D020000 		.4byte	.LASF20
+ 430 00e5 01       		.byte	0x1
+ 431 00e6 00       		.byte	0
+ 432 00e7 03       		.uleb128 0x3
+ 433 00e8 4F000000 		.4byte	.LASF21
+ 434 00ec 05       		.byte	0x5
+ 435 00ed 18       		.byte	0x18
+ 436 00ee CE000000 		.4byte	0xce
+ 437 00f2 02       		.uleb128 0x2
+ 438 00f3 08       		.byte	0x8
+ 439 00f4 04       		.byte	0x4
+ 440 00f5 83020000 		.4byte	.LASF22
+ 441 00f9 02       		.uleb128 0x2
+ 442 00fa 04       		.byte	0x4
+ 443 00fb 07       		.byte	0x7
+ 444 00fc 08020000 		.4byte	.LASF23
+ 445 0100 08       		.uleb128 0x8
+ 446 0101 38020000 		.4byte	.LASF24
+ 447 0105 01       		.byte	0x1
+ 448 0106 0E       		.byte	0xe
+ 449 0107 00000000 		.4byte	.LFB64
+ 450 010b CC000000 		.4byte	.LFE64-.LFB64
+ 451 010f 01       		.uleb128 0x1
+ 452 0110 9C       		.byte	0x9c
+ 453 0111 A8020000 		.4byte	0x2a8
+ 454 0115 09       		.uleb128 0x9
+ 455 0116 06000000 		.4byte	.LVL0
+ 456 011a 24040000 		.4byte	0x424
+ 457 011e 09       		.uleb128 0x9
+ 458 011f 2E000000 		.4byte	.LVL1
+ 459 0123 2F040000 		.4byte	0x42f
+ 460 0127 0A       		.uleb128 0xa
+ 461 0128 34000000 		.4byte	.LVL2
+ 462 012c 3A040000 		.4byte	0x43a
+ 463 0130 3A010000 		.4byte	0x13a
+ 464 0134 0B       		.uleb128 0xb
+ 465 0135 01       		.uleb128 0x1
+ 466 0136 50       		.byte	0x50
+ 467 0137 01       		.uleb128 0x1
+ 468 0138 31       		.byte	0x31
+ 469 0139 00       		.byte	0
+ 470 013a 0A       		.uleb128 0xa
+ 471 013b 3A000000 		.4byte	.LVL3
+ 472 013f 45040000 		.4byte	0x445
+ 473 0143 4D010000 		.4byte	0x14d
+ 474 0147 0B       		.uleb128 0xb
+ 475 0148 01       		.uleb128 0x1
+ 476 0149 50       		.byte	0x50
+ 477 014a 01       		.uleb128 0x1
+ 478 014b 30       		.byte	0x30
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 11
+
+
+ 479 014c 00       		.byte	0
+ 480 014d 0A       		.uleb128 0xa
+ 481 014e 40000000 		.4byte	.LVL4
+ 482 0152 50040000 		.4byte	0x450
+ 483 0156 60010000 		.4byte	0x160
+ 484 015a 0B       		.uleb128 0xb
+ 485 015b 01       		.uleb128 0x1
+ 486 015c 50       		.byte	0x50
+ 487 015d 01       		.uleb128 0x1
+ 488 015e 30       		.byte	0x30
+ 489 015f 00       		.byte	0
+ 490 0160 0A       		.uleb128 0xa
+ 491 0161 4E000000 		.4byte	.LVL5
+ 492 0165 3A040000 		.4byte	0x43a
+ 493 0169 73010000 		.4byte	0x173
+ 494 016d 0B       		.uleb128 0xb
+ 495 016e 01       		.uleb128 0x1
+ 496 016f 50       		.byte	0x50
+ 497 0170 01       		.uleb128 0x1
+ 498 0171 30       		.byte	0x30
+ 499 0172 00       		.byte	0
+ 500 0173 0A       		.uleb128 0xa
+ 501 0174 54000000 		.4byte	.LVL6
+ 502 0178 45040000 		.4byte	0x445
+ 503 017c 86010000 		.4byte	0x186
+ 504 0180 0B       		.uleb128 0xb
+ 505 0181 01       		.uleb128 0x1
+ 506 0182 50       		.byte	0x50
+ 507 0183 01       		.uleb128 0x1
+ 508 0184 31       		.byte	0x31
+ 509 0185 00       		.byte	0
+ 510 0186 0A       		.uleb128 0xa
+ 511 0187 5A000000 		.4byte	.LVL7
+ 512 018b 50040000 		.4byte	0x450
+ 513 018f 99010000 		.4byte	0x199
+ 514 0193 0B       		.uleb128 0xb
+ 515 0194 01       		.uleb128 0x1
+ 516 0195 50       		.byte	0x50
+ 517 0196 01       		.uleb128 0x1
+ 518 0197 30       		.byte	0x30
+ 519 0198 00       		.byte	0
+ 520 0199 0A       		.uleb128 0xa
+ 521 019a 68000000 		.4byte	.LVL8
+ 522 019e 50040000 		.4byte	0x450
+ 523 01a2 AC010000 		.4byte	0x1ac
+ 524 01a6 0B       		.uleb128 0xb
+ 525 01a7 01       		.uleb128 0x1
+ 526 01a8 50       		.byte	0x50
+ 527 01a9 01       		.uleb128 0x1
+ 528 01aa 31       		.byte	0x31
+ 529 01ab 00       		.byte	0
+ 530 01ac 09       		.uleb128 0x9
+ 531 01ad 6C000000 		.4byte	.LVL9
+ 532 01b1 5B040000 		.4byte	0x45b
+ 533 01b5 0A       		.uleb128 0xa
+ 534 01b6 72000000 		.4byte	.LVL10
+ 535 01ba 3A040000 		.4byte	0x43a
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 12
+
+
+ 536 01be C8010000 		.4byte	0x1c8
+ 537 01c2 0B       		.uleb128 0xb
+ 538 01c3 01       		.uleb128 0x1
+ 539 01c4 50       		.byte	0x50
+ 540 01c5 01       		.uleb128 0x1
+ 541 01c6 30       		.byte	0x30
+ 542 01c7 00       		.byte	0
+ 543 01c8 0A       		.uleb128 0xa
+ 544 01c9 78000000 		.4byte	.LVL11
+ 545 01cd 45040000 		.4byte	0x445
+ 546 01d1 DB010000 		.4byte	0x1db
+ 547 01d5 0B       		.uleb128 0xb
+ 548 01d6 01       		.uleb128 0x1
+ 549 01d7 50       		.byte	0x50
+ 550 01d8 01       		.uleb128 0x1
+ 551 01d9 30       		.byte	0x30
+ 552 01da 00       		.byte	0
+ 553 01db 0A       		.uleb128 0xa
+ 554 01dc 80000000 		.4byte	.LVL12
+ 555 01e0 45040000 		.4byte	0x445
+ 556 01e4 EE010000 		.4byte	0x1ee
+ 557 01e8 0B       		.uleb128 0xb
+ 558 01e9 01       		.uleb128 0x1
+ 559 01ea 50       		.byte	0x50
+ 560 01eb 01       		.uleb128 0x1
+ 561 01ec 31       		.byte	0x31
+ 562 01ed 00       		.byte	0
+ 563 01ee 09       		.uleb128 0x9
+ 564 01ef 84000000 		.4byte	.LVL13
+ 565 01f3 2F040000 		.4byte	0x42f
+ 566 01f7 0A       		.uleb128 0xa
+ 567 01f8 8A000000 		.4byte	.LVL14
+ 568 01fc 50040000 		.4byte	0x450
+ 569 0200 0A020000 		.4byte	0x20a
+ 570 0204 0B       		.uleb128 0xb
+ 571 0205 01       		.uleb128 0x1
+ 572 0206 50       		.byte	0x50
+ 573 0207 01       		.uleb128 0x1
+ 574 0208 30       		.byte	0x30
+ 575 0209 00       		.byte	0
+ 576 020a 0A       		.uleb128 0xa
+ 577 020b 90000000 		.4byte	.LVL15
+ 578 020f 3A040000 		.4byte	0x43a
+ 579 0213 1D020000 		.4byte	0x21d
+ 580 0217 0B       		.uleb128 0xb
+ 581 0218 01       		.uleb128 0x1
+ 582 0219 50       		.byte	0x50
+ 583 021a 01       		.uleb128 0x1
+ 584 021b 30       		.byte	0x30
+ 585 021c 00       		.byte	0
+ 586 021d 0A       		.uleb128 0xa
+ 587 021e 98000000 		.4byte	.LVL16
+ 588 0222 45040000 		.4byte	0x445
+ 589 0226 30020000 		.4byte	0x230
+ 590 022a 0B       		.uleb128 0xb
+ 591 022b 01       		.uleb128 0x1
+ 592 022c 50       		.byte	0x50
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 13
+
+
+ 593 022d 01       		.uleb128 0x1
+ 594 022e 30       		.byte	0x30
+ 595 022f 00       		.byte	0
+ 596 0230 0A       		.uleb128 0xa
+ 597 0231 9E000000 		.4byte	.LVL17
+ 598 0235 66040000 		.4byte	0x466
+ 599 0239 43020000 		.4byte	0x243
+ 600 023d 0B       		.uleb128 0xb
+ 601 023e 01       		.uleb128 0x1
+ 602 023f 50       		.byte	0x50
+ 603 0240 01       		.uleb128 0x1
+ 604 0241 30       		.byte	0x30
+ 605 0242 00       		.byte	0
+ 606 0243 0A       		.uleb128 0xa
+ 607 0244 A4000000 		.4byte	.LVL18
+ 608 0248 50040000 		.4byte	0x450
+ 609 024c 56020000 		.4byte	0x256
+ 610 0250 0B       		.uleb128 0xb
+ 611 0251 01       		.uleb128 0x1
+ 612 0252 50       		.byte	0x50
+ 613 0253 01       		.uleb128 0x1
+ 614 0254 30       		.byte	0x30
+ 615 0255 00       		.byte	0
+ 616 0256 0A       		.uleb128 0xa
+ 617 0257 AA000000 		.4byte	.LVL19
+ 618 025b 3A040000 		.4byte	0x43a
+ 619 025f 69020000 		.4byte	0x269
+ 620 0263 0B       		.uleb128 0xb
+ 621 0264 01       		.uleb128 0x1
+ 622 0265 50       		.byte	0x50
+ 623 0266 01       		.uleb128 0x1
+ 624 0267 31       		.byte	0x31
+ 625 0268 00       		.byte	0
+ 626 0269 09       		.uleb128 0x9
+ 627 026a B0000000 		.4byte	.LVL20
+ 628 026e 5B040000 		.4byte	0x45b
+ 629 0272 0A       		.uleb128 0xa
+ 630 0273 B6000000 		.4byte	.LVL21
+ 631 0277 3A040000 		.4byte	0x43a
+ 632 027b 85020000 		.4byte	0x285
+ 633 027f 0B       		.uleb128 0xb
+ 634 0280 01       		.uleb128 0x1
+ 635 0281 50       		.byte	0x50
+ 636 0282 01       		.uleb128 0x1
+ 637 0283 30       		.byte	0x30
+ 638 0284 00       		.byte	0
+ 639 0285 0A       		.uleb128 0xa
+ 640 0286 BC000000 		.4byte	.LVL22
+ 641 028a 45040000 		.4byte	0x445
+ 642 028e 98020000 		.4byte	0x298
+ 643 0292 0B       		.uleb128 0xb
+ 644 0293 01       		.uleb128 0x1
+ 645 0294 50       		.byte	0x50
+ 646 0295 01       		.uleb128 0x1
+ 647 0296 30       		.byte	0x30
+ 648 0297 00       		.byte	0
+ 649 0298 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 14
+
+
+ 650 0299 C2000000 		.4byte	.LVL23
+ 651 029d 50040000 		.4byte	0x450
+ 652 02a1 0B       		.uleb128 0xb
+ 653 02a2 01       		.uleb128 0x1
+ 654 02a3 50       		.byte	0x50
+ 655 02a4 01       		.uleb128 0x1
+ 656 02a5 30       		.byte	0x30
+ 657 02a6 00       		.byte	0
+ 658 02a7 00       		.byte	0
+ 659 02a8 08       		.uleb128 0x8
+ 660 02a9 36000000 		.4byte	.LASF25
+ 661 02ad 01       		.byte	0x1
+ 662 02ae 41       		.byte	0x41
+ 663 02af 00000000 		.4byte	.LFB65
+ 664 02b3 7C000000 		.4byte	.LFE65-.LFB65
+ 665 02b7 01       		.uleb128 0x1
+ 666 02b8 9C       		.byte	0x9c
+ 667 02b9 5C030000 		.4byte	0x35c
+ 668 02bd 0D       		.uleb128 0xd
+ 669 02be 11020000 		.4byte	.LASF48
+ 670 02c2 01       		.byte	0x1
+ 671 02c3 44       		.byte	0x44
+ 672 02c4 E7000000 		.4byte	0xe7
+ 673 02c8 00000000 		.4byte	.LLST0
+ 674 02cc 0A       		.uleb128 0xa
+ 675 02cd 0C000000 		.4byte	.LVL24
+ 676 02d1 71040000 		.4byte	0x471
+ 677 02d5 EE020000 		.4byte	0x2ee
+ 678 02d9 0B       		.uleb128 0xb
+ 679 02da 01       		.uleb128 0x1
+ 680 02db 50       		.byte	0x50
+ 681 02dc 01       		.uleb128 0x1
+ 682 02dd 48       		.byte	0x48
+ 683 02de 0B       		.uleb128 0xb
+ 684 02df 01       		.uleb128 0x1
+ 685 02e0 51       		.byte	0x51
+ 686 02e1 02       		.uleb128 0x2
+ 687 02e2 08       		.byte	0x8
+ 688 02e3 27       		.byte	0x27
+ 689 02e4 0B       		.uleb128 0xb
+ 690 02e5 01       		.uleb128 0x1
+ 691 02e6 52       		.byte	0x52
+ 692 02e7 05       		.uleb128 0x5
+ 693 02e8 03       		.byte	0x3
+ 694 02e9 00000000 		.4byte	status_reg
+ 695 02ed 00       		.byte	0
+ 696 02ee 0A       		.uleb128 0xa
+ 697 02ef 32000000 		.4byte	.LVL26
+ 698 02f3 71040000 		.4byte	0x471
+ 699 02f7 0D030000 		.4byte	0x30d
+ 700 02fb 0B       		.uleb128 0xb
+ 701 02fc 01       		.uleb128 0x1
+ 702 02fd 50       		.byte	0x50
+ 703 02fe 01       		.uleb128 0x1
+ 704 02ff 48       		.byte	0x48
+ 705 0300 0B       		.uleb128 0xb
+ 706 0301 01       		.uleb128 0x1
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 15
+
+
+ 707 0302 51       		.byte	0x51
+ 708 0303 02       		.uleb128 0x2
+ 709 0304 08       		.byte	0x8
+ 710 0305 2C       		.byte	0x2c
+ 711 0306 0B       		.uleb128 0xb
+ 712 0307 01       		.uleb128 0x1
+ 713 0308 52       		.byte	0x52
+ 714 0309 02       		.uleb128 0x2
+ 715 030a 74       		.byte	0x74
+ 716 030b 00       		.sleb128 0
+ 717 030c 00       		.byte	0
+ 718 030d 0A       		.uleb128 0xa
+ 719 030e 3C000000 		.4byte	.LVL27
+ 720 0312 71040000 		.4byte	0x471
+ 721 0316 2C030000 		.4byte	0x32c
+ 722 031a 0B       		.uleb128 0xb
+ 723 031b 01       		.uleb128 0x1
+ 724 031c 50       		.byte	0x50
+ 725 031d 01       		.uleb128 0x1
+ 726 031e 48       		.byte	0x48
+ 727 031f 0B       		.uleb128 0xb
+ 728 0320 01       		.uleb128 0x1
+ 729 0321 51       		.byte	0x51
+ 730 0322 02       		.uleb128 0x2
+ 731 0323 08       		.byte	0x8
+ 732 0324 2D       		.byte	0x2d
+ 733 0325 0B       		.uleb128 0xb
+ 734 0326 01       		.uleb128 0x1
+ 735 0327 52       		.byte	0x52
+ 736 0328 02       		.uleb128 0x2
+ 737 0329 74       		.byte	0x74
+ 738 032a 01       		.sleb128 1
+ 739 032b 00       		.byte	0
+ 740 032c 0A       		.uleb128 0xa
+ 741 032d 56000000 		.4byte	.LVL29
+ 742 0331 7C040000 		.4byte	0x47c
+ 743 0335 48030000 		.4byte	0x348
+ 744 0339 0B       		.uleb128 0xb
+ 745 033a 01       		.uleb128 0x1
+ 746 033b 50       		.byte	0x50
+ 747 033c 05       		.uleb128 0x5
+ 748 033d 03       		.byte	0x3
+ 749 033e 00000000 		.4byte	DataBuffer
+ 750 0342 0B       		.uleb128 0xb
+ 751 0343 01       		.uleb128 0x1
+ 752 0344 51       		.byte	0x51
+ 753 0345 01       		.uleb128 0x1
+ 754 0346 34       		.byte	0x34
+ 755 0347 00       		.byte	0
+ 756 0348 0C       		.uleb128 0xc
+ 757 0349 5E000000 		.4byte	.LVL32
+ 758 034d 87040000 		.4byte	0x487
+ 759 0351 0B       		.uleb128 0xb
+ 760 0352 01       		.uleb128 0x1
+ 761 0353 50       		.byte	0x50
+ 762 0354 05       		.uleb128 0x5
+ 763 0355 03       		.byte	0x3
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 16
+
+
+ 764 0356 00000000 		.4byte	.LC0
+ 765 035a 00       		.byte	0
+ 766 035b 00       		.byte	0
+ 767 035c 0E       		.uleb128 0xe
+ 768 035d 9F010000 		.4byte	.LASF26
+ 769 0361 06       		.byte	0x6
+ 770 0362 1207     		.2byte	0x712
+ 771 0364 68030000 		.4byte	0x368
+ 772 0368 0F       		.uleb128 0xf
+ 773 0369 A2000000 		.4byte	0xa2
+ 774 036d 10       		.uleb128 0x10
+ 775 036e AD000000 		.4byte	0xad
+ 776 0372 7D030000 		.4byte	0x37d
+ 777 0376 11       		.uleb128 0x11
+ 778 0377 F9000000 		.4byte	0xf9
+ 779 037b 03       		.byte	0x3
+ 780 037c 00       		.byte	0
+ 781 037d 12       		.uleb128 0x12
+ 782 037e 78020000 		.4byte	.LASF27
+ 783 0382 07       		.byte	0x7
+ 784 0383 13       		.byte	0x13
+ 785 0384 6D030000 		.4byte	0x36d
+ 786 0388 05       		.uleb128 0x5
+ 787 0389 03       		.byte	0x3
+ 788 038a 00000000 		.4byte	DataBuffer
+ 789 038e 12       		.uleb128 0x12
+ 790 038f 60010000 		.4byte	.LASF28
+ 791 0393 01       		.byte	0x1
+ 792 0394 05       		.byte	0x5
+ 793 0395 97000000 		.4byte	0x97
+ 794 0399 05       		.uleb128 0x5
+ 795 039a 03       		.byte	0x3
+ 796 039b 00000000 		.4byte	OutData
+ 797 039f 10       		.uleb128 0x10
+ 798 03a0 8C000000 		.4byte	0x8c
+ 799 03a4 AF030000 		.4byte	0x3af
+ 800 03a8 11       		.uleb128 0x11
+ 801 03a9 F9000000 		.4byte	0xf9
+ 802 03ad 01       		.byte	0x1
+ 803 03ae 00       		.byte	0
+ 804 03af 12       		.uleb128 0x12
+ 805 03b0 96010000 		.4byte	.LASF29
+ 806 03b4 01       		.byte	0x1
+ 807 03b5 06       		.byte	0x6
+ 808 03b6 9F030000 		.4byte	0x39f
+ 809 03ba 05       		.uleb128 0x5
+ 810 03bb 03       		.byte	0x3
+ 811 03bc 00000000 		.4byte	Acc_Data
+ 812 03c0 12       		.uleb128 0x12
+ 813 03c1 03010000 		.4byte	.LASF30
+ 814 03c5 01       		.byte	0x1
+ 815 03c6 07       		.byte	0x7
+ 816 03c7 8C000000 		.4byte	0x8c
+ 817 03cb 05       		.uleb128 0x5
+ 818 03cc 03       		.byte	0x3
+ 819 03cd 00000000 		.4byte	ZYX_DA
+ 820 03d1 12       		.uleb128 0x12
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 17
+
+
+ 821 03d2 0A010000 		.4byte	.LASF31
+ 822 03d6 01       		.byte	0x1
+ 823 03d7 08       		.byte	0x8
+ 824 03d8 8C000000 		.4byte	0x8c
+ 825 03dc 05       		.uleb128 0x5
+ 826 03dd 03       		.byte	0x3
+ 827 03de 00000000 		.4byte	ZYX_OR
+ 828 03e2 12       		.uleb128 0x12
+ 829 03e3 0A000000 		.4byte	.LASF32
+ 830 03e7 01       		.byte	0x1
+ 831 03e8 09       		.byte	0x9
+ 832 03e9 8C000000 		.4byte	0x8c
+ 833 03ed 05       		.uleb128 0x5
+ 834 03ee 03       		.byte	0x3
+ 835 03ef 00000000 		.4byte	status_reg
+ 836 03f3 13       		.uleb128 0x13
+ 837 03f4 6700     		.ascii	"g\000"
+ 838 03f6 01       		.byte	0x1
+ 839 03f7 0A       		.byte	0xa
+ 840 03f8 B9000000 		.4byte	0xb9
+ 841 03fc 05       		.uleb128 0x5
+ 842 03fd 03       		.byte	0x3
+ 843 03fe 00000000 		.4byte	g
+ 844 0402 12       		.uleb128 0x12
+ 845 0403 FC010000 		.4byte	.LASF33
+ 846 0407 01       		.byte	0x1
+ 847 0408 0B       		.byte	0xb
+ 848 0409 C7000000 		.4byte	0xc7
+ 849 040d 05       		.uleb128 0x5
+ 850 040e 03       		.byte	0x3
+ 851 040f 00000000 		.4byte	ch_received
+ 852 0413 12       		.uleb128 0x12
+ 853 0414 29000000 		.4byte	.LASF34
+ 854 0418 01       		.byte	0x1
+ 855 0419 0C       		.byte	0xc
+ 856 041a C7000000 		.4byte	0xc7
+ 857 041e 05       		.uleb128 0x5
+ 858 041f 03       		.byte	0x3
+ 859 0420 00000000 		.4byte	start_stream
+ 860 0424 14       		.uleb128 0x14
+ 861 0425 ED010000 		.4byte	.LASF35
+ 862 0429 ED010000 		.4byte	.LASF35
+ 863 042d 08       		.byte	0x8
+ 864 042e 71       		.byte	0x71
+ 865 042f 14       		.uleb128 0x14
+ 866 0430 E0010000 		.4byte	.LASF36
+ 867 0434 E0010000 		.4byte	.LASF36
+ 868 0438 09       		.byte	0x9
+ 869 0439 93       		.byte	0x93
+ 870 043a 14       		.uleb128 0x14
+ 871 043b 52020000 		.4byte	.LASF37
+ 872 043f 52020000 		.4byte	.LASF37
+ 873 0443 0A       		.byte	0xa
+ 874 0444 26       		.byte	0x26
+ 875 0445 14       		.uleb128 0x14
+ 876 0446 54010000 		.4byte	.LASF38
+ 877 044a 54010000 		.4byte	.LASF38
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 18
+
+
+ 878 044e 0B       		.byte	0xb
+ 879 044f 26       		.byte	0x26
+ 880 0450 14       		.uleb128 0x14
+ 881 0451 AC020000 		.4byte	.LASF39
+ 882 0455 AC020000 		.4byte	.LASF39
+ 883 0459 0C       		.byte	0xc
+ 884 045a 26       		.byte	0x26
+ 885 045b 14       		.uleb128 0x14
+ 886 045c 46010000 		.4byte	.LASF40
+ 887 0460 46010000 		.4byte	.LASF40
+ 888 0464 09       		.byte	0x9
+ 889 0465 92       		.byte	0x92
+ 890 0466 14       		.uleb128 0x14
+ 891 0467 46020000 		.4byte	.LASF41
+ 892 046b 46020000 		.4byte	.LASF41
+ 893 046f 0D       		.byte	0xd
+ 894 0470 26       		.byte	0x26
+ 895 0471 14       		.uleb128 0x14
+ 896 0472 68010000 		.4byte	.LASF42
+ 897 0476 68010000 		.4byte	.LASF42
+ 898 047a 0E       		.byte	0xe
+ 899 047b 2C       		.byte	0x2c
+ 900 047c 14       		.uleb128 0x14
+ 901 047d 36010000 		.4byte	.LASF43
+ 902 0481 36010000 		.4byte	.LASF43
+ 903 0485 08       		.byte	0x8
+ 904 0486 8C       		.byte	0x8c
+ 905 0487 14       		.uleb128 0x14
+ 906 0488 9B020000 		.4byte	.LASF44
+ 907 048c 9B020000 		.4byte	.LASF44
+ 908 0490 08       		.byte	0x8
+ 909 0491 8B       		.byte	0x8b
+ 910 0492 00       		.byte	0
+ 911              		.section	.debug_abbrev,"",%progbits
+ 912              	.Ldebug_abbrev0:
+ 913 0000 01       		.uleb128 0x1
+ 914 0001 11       		.uleb128 0x11
+ 915 0002 01       		.byte	0x1
+ 916 0003 25       		.uleb128 0x25
+ 917 0004 0E       		.uleb128 0xe
+ 918 0005 13       		.uleb128 0x13
+ 919 0006 0B       		.uleb128 0xb
+ 920 0007 03       		.uleb128 0x3
+ 921 0008 0E       		.uleb128 0xe
+ 922 0009 1B       		.uleb128 0x1b
+ 923 000a 0E       		.uleb128 0xe
+ 924 000b 55       		.uleb128 0x55
+ 925 000c 17       		.uleb128 0x17
+ 926 000d 11       		.uleb128 0x11
+ 927 000e 01       		.uleb128 0x1
+ 928 000f 10       		.uleb128 0x10
+ 929 0010 17       		.uleb128 0x17
+ 930 0011 00       		.byte	0
+ 931 0012 00       		.byte	0
+ 932 0013 02       		.uleb128 0x2
+ 933 0014 24       		.uleb128 0x24
+ 934 0015 00       		.byte	0
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 19
+
+
+ 935 0016 0B       		.uleb128 0xb
+ 936 0017 0B       		.uleb128 0xb
+ 937 0018 3E       		.uleb128 0x3e
+ 938 0019 0B       		.uleb128 0xb
+ 939 001a 03       		.uleb128 0x3
+ 940 001b 0E       		.uleb128 0xe
+ 941 001c 00       		.byte	0
+ 942 001d 00       		.byte	0
+ 943 001e 03       		.uleb128 0x3
+ 944 001f 16       		.uleb128 0x16
+ 945 0020 00       		.byte	0
+ 946 0021 03       		.uleb128 0x3
+ 947 0022 0E       		.uleb128 0xe
+ 948 0023 3A       		.uleb128 0x3a
+ 949 0024 0B       		.uleb128 0xb
+ 950 0025 3B       		.uleb128 0x3b
+ 951 0026 0B       		.uleb128 0xb
+ 952 0027 49       		.uleb128 0x49
+ 953 0028 13       		.uleb128 0x13
+ 954 0029 00       		.byte	0
+ 955 002a 00       		.byte	0
+ 956 002b 04       		.uleb128 0x4
+ 957 002c 24       		.uleb128 0x24
+ 958 002d 00       		.byte	0
+ 959 002e 0B       		.uleb128 0xb
+ 960 002f 0B       		.uleb128 0xb
+ 961 0030 3E       		.uleb128 0x3e
+ 962 0031 0B       		.uleb128 0xb
+ 963 0032 03       		.uleb128 0x3
+ 964 0033 08       		.uleb128 0x8
+ 965 0034 00       		.byte	0
+ 966 0035 00       		.byte	0
+ 967 0036 05       		.uleb128 0x5
+ 968 0037 16       		.uleb128 0x16
+ 969 0038 00       		.byte	0
+ 970 0039 03       		.uleb128 0x3
+ 971 003a 0E       		.uleb128 0xe
+ 972 003b 3A       		.uleb128 0x3a
+ 973 003c 0B       		.uleb128 0xb
+ 974 003d 3B       		.uleb128 0x3b
+ 975 003e 05       		.uleb128 0x5
+ 976 003f 49       		.uleb128 0x49
+ 977 0040 13       		.uleb128 0x13
+ 978 0041 00       		.byte	0
+ 979 0042 00       		.byte	0
+ 980 0043 06       		.uleb128 0x6
+ 981 0044 04       		.uleb128 0x4
+ 982 0045 01       		.byte	0x1
+ 983 0046 0B       		.uleb128 0xb
+ 984 0047 0B       		.uleb128 0xb
+ 985 0048 49       		.uleb128 0x49
+ 986 0049 13       		.uleb128 0x13
+ 987 004a 3A       		.uleb128 0x3a
+ 988 004b 0B       		.uleb128 0xb
+ 989 004c 3B       		.uleb128 0x3b
+ 990 004d 0B       		.uleb128 0xb
+ 991 004e 01       		.uleb128 0x1
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 20
+
+
+ 992 004f 13       		.uleb128 0x13
+ 993 0050 00       		.byte	0
+ 994 0051 00       		.byte	0
+ 995 0052 07       		.uleb128 0x7
+ 996 0053 28       		.uleb128 0x28
+ 997 0054 00       		.byte	0
+ 998 0055 03       		.uleb128 0x3
+ 999 0056 0E       		.uleb128 0xe
+ 1000 0057 1C       		.uleb128 0x1c
+ 1001 0058 0B       		.uleb128 0xb
+ 1002 0059 00       		.byte	0
+ 1003 005a 00       		.byte	0
+ 1004 005b 08       		.uleb128 0x8
+ 1005 005c 2E       		.uleb128 0x2e
+ 1006 005d 01       		.byte	0x1
+ 1007 005e 3F       		.uleb128 0x3f
+ 1008 005f 19       		.uleb128 0x19
+ 1009 0060 03       		.uleb128 0x3
+ 1010 0061 0E       		.uleb128 0xe
+ 1011 0062 3A       		.uleb128 0x3a
+ 1012 0063 0B       		.uleb128 0xb
+ 1013 0064 3B       		.uleb128 0x3b
+ 1014 0065 0B       		.uleb128 0xb
+ 1015 0066 27       		.uleb128 0x27
+ 1016 0067 19       		.uleb128 0x19
+ 1017 0068 11       		.uleb128 0x11
+ 1018 0069 01       		.uleb128 0x1
+ 1019 006a 12       		.uleb128 0x12
+ 1020 006b 06       		.uleb128 0x6
+ 1021 006c 40       		.uleb128 0x40
+ 1022 006d 18       		.uleb128 0x18
+ 1023 006e 9742     		.uleb128 0x2117
+ 1024 0070 19       		.uleb128 0x19
+ 1025 0071 01       		.uleb128 0x1
+ 1026 0072 13       		.uleb128 0x13
+ 1027 0073 00       		.byte	0
+ 1028 0074 00       		.byte	0
+ 1029 0075 09       		.uleb128 0x9
+ 1030 0076 898201   		.uleb128 0x4109
+ 1031 0079 00       		.byte	0
+ 1032 007a 11       		.uleb128 0x11
+ 1033 007b 01       		.uleb128 0x1
+ 1034 007c 31       		.uleb128 0x31
+ 1035 007d 13       		.uleb128 0x13
+ 1036 007e 00       		.byte	0
+ 1037 007f 00       		.byte	0
+ 1038 0080 0A       		.uleb128 0xa
+ 1039 0081 898201   		.uleb128 0x4109
+ 1040 0084 01       		.byte	0x1
+ 1041 0085 11       		.uleb128 0x11
+ 1042 0086 01       		.uleb128 0x1
+ 1043 0087 31       		.uleb128 0x31
+ 1044 0088 13       		.uleb128 0x13
+ 1045 0089 01       		.uleb128 0x1
+ 1046 008a 13       		.uleb128 0x13
+ 1047 008b 00       		.byte	0
+ 1048 008c 00       		.byte	0
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 21
+
+
+ 1049 008d 0B       		.uleb128 0xb
+ 1050 008e 8A8201   		.uleb128 0x410a
+ 1051 0091 00       		.byte	0
+ 1052 0092 02       		.uleb128 0x2
+ 1053 0093 18       		.uleb128 0x18
+ 1054 0094 9142     		.uleb128 0x2111
+ 1055 0096 18       		.uleb128 0x18
+ 1056 0097 00       		.byte	0
+ 1057 0098 00       		.byte	0
+ 1058 0099 0C       		.uleb128 0xc
+ 1059 009a 898201   		.uleb128 0x4109
+ 1060 009d 01       		.byte	0x1
+ 1061 009e 11       		.uleb128 0x11
+ 1062 009f 01       		.uleb128 0x1
+ 1063 00a0 31       		.uleb128 0x31
+ 1064 00a1 13       		.uleb128 0x13
+ 1065 00a2 00       		.byte	0
+ 1066 00a3 00       		.byte	0
+ 1067 00a4 0D       		.uleb128 0xd
+ 1068 00a5 34       		.uleb128 0x34
+ 1069 00a6 00       		.byte	0
+ 1070 00a7 03       		.uleb128 0x3
+ 1071 00a8 0E       		.uleb128 0xe
+ 1072 00a9 3A       		.uleb128 0x3a
+ 1073 00aa 0B       		.uleb128 0xb
+ 1074 00ab 3B       		.uleb128 0x3b
+ 1075 00ac 0B       		.uleb128 0xb
+ 1076 00ad 49       		.uleb128 0x49
+ 1077 00ae 13       		.uleb128 0x13
+ 1078 00af 02       		.uleb128 0x2
+ 1079 00b0 17       		.uleb128 0x17
+ 1080 00b1 00       		.byte	0
+ 1081 00b2 00       		.byte	0
+ 1082 00b3 0E       		.uleb128 0xe
+ 1083 00b4 34       		.uleb128 0x34
+ 1084 00b5 00       		.byte	0
+ 1085 00b6 03       		.uleb128 0x3
+ 1086 00b7 0E       		.uleb128 0xe
+ 1087 00b8 3A       		.uleb128 0x3a
+ 1088 00b9 0B       		.uleb128 0xb
+ 1089 00ba 3B       		.uleb128 0x3b
+ 1090 00bb 05       		.uleb128 0x5
+ 1091 00bc 49       		.uleb128 0x49
+ 1092 00bd 13       		.uleb128 0x13
+ 1093 00be 3F       		.uleb128 0x3f
+ 1094 00bf 19       		.uleb128 0x19
+ 1095 00c0 3C       		.uleb128 0x3c
+ 1096 00c1 19       		.uleb128 0x19
+ 1097 00c2 00       		.byte	0
+ 1098 00c3 00       		.byte	0
+ 1099 00c4 0F       		.uleb128 0xf
+ 1100 00c5 35       		.uleb128 0x35
+ 1101 00c6 00       		.byte	0
+ 1102 00c7 49       		.uleb128 0x49
+ 1103 00c8 13       		.uleb128 0x13
+ 1104 00c9 00       		.byte	0
+ 1105 00ca 00       		.byte	0
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 22
+
+
+ 1106 00cb 10       		.uleb128 0x10
+ 1107 00cc 01       		.uleb128 0x1
+ 1108 00cd 01       		.byte	0x1
+ 1109 00ce 49       		.uleb128 0x49
+ 1110 00cf 13       		.uleb128 0x13
+ 1111 00d0 01       		.uleb128 0x1
+ 1112 00d1 13       		.uleb128 0x13
+ 1113 00d2 00       		.byte	0
+ 1114 00d3 00       		.byte	0
+ 1115 00d4 11       		.uleb128 0x11
+ 1116 00d5 21       		.uleb128 0x21
+ 1117 00d6 00       		.byte	0
+ 1118 00d7 49       		.uleb128 0x49
+ 1119 00d8 13       		.uleb128 0x13
+ 1120 00d9 2F       		.uleb128 0x2f
+ 1121 00da 0B       		.uleb128 0xb
+ 1122 00db 00       		.byte	0
+ 1123 00dc 00       		.byte	0
+ 1124 00dd 12       		.uleb128 0x12
+ 1125 00de 34       		.uleb128 0x34
+ 1126 00df 00       		.byte	0
+ 1127 00e0 03       		.uleb128 0x3
+ 1128 00e1 0E       		.uleb128 0xe
+ 1129 00e2 3A       		.uleb128 0x3a
+ 1130 00e3 0B       		.uleb128 0xb
+ 1131 00e4 3B       		.uleb128 0x3b
+ 1132 00e5 0B       		.uleb128 0xb
+ 1133 00e6 49       		.uleb128 0x49
+ 1134 00e7 13       		.uleb128 0x13
+ 1135 00e8 3F       		.uleb128 0x3f
+ 1136 00e9 19       		.uleb128 0x19
+ 1137 00ea 02       		.uleb128 0x2
+ 1138 00eb 18       		.uleb128 0x18
+ 1139 00ec 00       		.byte	0
+ 1140 00ed 00       		.byte	0
+ 1141 00ee 13       		.uleb128 0x13
+ 1142 00ef 34       		.uleb128 0x34
+ 1143 00f0 00       		.byte	0
+ 1144 00f1 03       		.uleb128 0x3
+ 1145 00f2 08       		.uleb128 0x8
+ 1146 00f3 3A       		.uleb128 0x3a
+ 1147 00f4 0B       		.uleb128 0xb
+ 1148 00f5 3B       		.uleb128 0x3b
+ 1149 00f6 0B       		.uleb128 0xb
+ 1150 00f7 49       		.uleb128 0x49
+ 1151 00f8 13       		.uleb128 0x13
+ 1152 00f9 3F       		.uleb128 0x3f
+ 1153 00fa 19       		.uleb128 0x19
+ 1154 00fb 02       		.uleb128 0x2
+ 1155 00fc 18       		.uleb128 0x18
+ 1156 00fd 00       		.byte	0
+ 1157 00fe 00       		.byte	0
+ 1158 00ff 14       		.uleb128 0x14
+ 1159 0100 2E       		.uleb128 0x2e
+ 1160 0101 00       		.byte	0
+ 1161 0102 3F       		.uleb128 0x3f
+ 1162 0103 19       		.uleb128 0x19
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 23
+
+
+ 1163 0104 3C       		.uleb128 0x3c
+ 1164 0105 19       		.uleb128 0x19
+ 1165 0106 6E       		.uleb128 0x6e
+ 1166 0107 0E       		.uleb128 0xe
+ 1167 0108 03       		.uleb128 0x3
+ 1168 0109 0E       		.uleb128 0xe
+ 1169 010a 3A       		.uleb128 0x3a
+ 1170 010b 0B       		.uleb128 0xb
+ 1171 010c 3B       		.uleb128 0x3b
+ 1172 010d 0B       		.uleb128 0xb
+ 1173 010e 00       		.byte	0
+ 1174 010f 00       		.byte	0
+ 1175 0110 00       		.byte	0
+ 1176              		.section	.debug_loc,"",%progbits
+ 1177              	.Ldebug_loc0:
+ 1178              	.LLST0:
+ 1179 0000 0C000000 		.4byte	.LVL24
+ 1180 0004 2E000000 		.4byte	.LVL25
+ 1181 0008 0100     		.2byte	0x1
+ 1182 000a 50       		.byte	0x50
+ 1183 000b 3C000000 		.4byte	.LVL27
+ 1184 000f 52000000 		.4byte	.LVL28
+ 1185 0013 0100     		.2byte	0x1
+ 1186 0015 50       		.byte	0x50
+ 1187 0016 58000000 		.4byte	.LVL30
+ 1188 001a 5A000000 		.4byte	.LVL31
+ 1189 001e 0100     		.2byte	0x1
+ 1190 0020 50       		.byte	0x50
+ 1191 0021 00000000 		.4byte	0
+ 1192 0025 00000000 		.4byte	0
+ 1193              		.section	.debug_aranges,"",%progbits
+ 1194 0000 24000000 		.4byte	0x24
+ 1195 0004 0200     		.2byte	0x2
+ 1196 0006 00000000 		.4byte	.Ldebug_info0
+ 1197 000a 04       		.byte	0x4
+ 1198 000b 00       		.byte	0
+ 1199 000c 0000     		.2byte	0
+ 1200 000e 0000     		.2byte	0
+ 1201 0010 00000000 		.4byte	.LFB64
+ 1202 0014 CC000000 		.4byte	.LFE64-.LFB64
+ 1203 0018 00000000 		.4byte	.LFB65
+ 1204 001c 7C000000 		.4byte	.LFE65-.LFB65
+ 1205 0020 00000000 		.4byte	0
+ 1206 0024 00000000 		.4byte	0
+ 1207              		.section	.debug_ranges,"",%progbits
+ 1208              	.Ldebug_ranges0:
+ 1209 0000 00000000 		.4byte	.LFB64
+ 1210 0004 CC000000 		.4byte	.LFE64
+ 1211 0008 00000000 		.4byte	.LFB65
+ 1212 000c 7C000000 		.4byte	.LFE65
+ 1213 0010 00000000 		.4byte	0
+ 1214 0014 00000000 		.4byte	0
+ 1215              		.section	.debug_line,"",%progbits
+ 1216              	.Ldebug_line0:
+ 1217 0000 15020000 		.section	.debug_str,"MS",%progbits,1
+ 1217      0200C301 
+ 1217      00000201 
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 24
+
+
+ 1217      FB0E0D00 
+ 1217      01010101 
+ 1218              	.LASF2:
+ 1219 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1219      6E74385F 
+ 1219      7400
+ 1220              	.LASF32:
+ 1221 000a 73746174 		.ascii	"status_reg\000"
+ 1221      75735F72 
+ 1221      656700
+ 1222              	.LASF3:
+ 1223 0015 5F5F696E 		.ascii	"__int16_t\000"
+ 1223      7431365F 
+ 1223      7400
+ 1224              	.LASF6:
+ 1225 001f 5F5F696E 		.ascii	"__int32_t\000"
+ 1225      7433325F 
+ 1225      7400
+ 1226              	.LASF34:
+ 1227 0029 73746172 		.ascii	"start_stream\000"
+ 1227      745F7374 
+ 1227      7265616D 
+ 1227      00
+ 1228              	.LASF25:
+ 1229 0036 43757374 		.ascii	"Custom_ISR_Data\000"
+ 1229      6F6D5F49 
+ 1229      53525F44 
+ 1229      61746100 
+ 1230              	.LASF7:
+ 1231 0046 6C6F6E67 		.ascii	"long int\000"
+ 1231      20696E74 
+ 1231      00
+ 1232              	.LASF21:
+ 1233 004f 4572726F 		.ascii	"ErrorCode\000"
+ 1233      72436F64 
+ 1233      6500
+ 1234              	.LASF14:
+ 1235 0059 696E7433 		.ascii	"int32_t\000"
+ 1235      325F7400 
+ 1236              	.LASF16:
+ 1237 0061 666C6F61 		.ascii	"float\000"
+ 1237      7400
+ 1238              	.LASF1:
+ 1239 0067 756E7369 		.ascii	"unsigned char\000"
+ 1239      676E6564 
+ 1239      20636861 
+ 1239      7200
+ 1240              	.LASF45:
+ 1241 0075 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1241      43313120 
+ 1241      352E342E 
+ 1241      31203230 
+ 1241      31363036 
+ 1242 00a8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1242      20726576 
+ 1242      6973696F 
+ 1242      6E203233 
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 25
+
+
+ 1242      37373135 
+ 1243 00db 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1243      66756E63 
+ 1243      74696F6E 
+ 1243      2D736563 
+ 1243      74696F6E 
+ 1244              	.LASF30:
+ 1245 0103 5A59585F 		.ascii	"ZYX_DA\000"
+ 1245      444100
+ 1246              	.LASF31:
+ 1247 010a 5A59585F 		.ascii	"ZYX_OR\000"
+ 1247      4F5200
+ 1248              	.LASF8:
+ 1249 0111 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1249      20756E73 
+ 1249      69676E65 
+ 1249      6420696E 
+ 1249      7400
+ 1250              	.LASF5:
+ 1251 0123 73686F72 		.ascii	"short unsigned int\000"
+ 1251      7420756E 
+ 1251      7369676E 
+ 1251      65642069 
+ 1251      6E7400
+ 1252              	.LASF43:
+ 1253 0136 55415254 		.ascii	"UART_1_PutArray\000"
+ 1253      5F315F50 
+ 1253      75744172 
+ 1253      72617900 
+ 1254              	.LASF40:
+ 1255 0146 50574D5F 		.ascii	"PWM_LED_Start\000"
+ 1255      4C45445F 
+ 1255      53746172 
+ 1255      7400
+ 1256              	.LASF38:
+ 1257 0154 4C45445F 		.ascii	"LED_B_Write\000"
+ 1257      425F5772 
+ 1257      69746500 
+ 1258              	.LASF28:
+ 1259 0160 4F757444 		.ascii	"OutData\000"
+ 1259      61746100 
+ 1260              	.LASF42:
+ 1261 0168 4932435F 		.ascii	"I2C_Peripheral_UReadRegister\000"
+ 1261      50657269 
+ 1261      70686572 
+ 1261      616C5F55 
+ 1261      52656164 
+ 1262              	.LASF17:
+ 1263 0185 646F7562 		.ascii	"double\000"
+ 1263      6C6500
+ 1264              	.LASF4:
+ 1265 018c 73686F72 		.ascii	"short int\000"
+ 1265      7420696E 
+ 1265      7400
+ 1266              	.LASF29:
+ 1267 0196 4163635F 		.ascii	"Acc_Data\000"
+ 1267      44617461 
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 26
+
+
+ 1267      00
+ 1268              	.LASF26:
+ 1269 019f 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1269      52784275 
+ 1269      66666572 
+ 1269      00
+ 1270              	.LASF11:
+ 1271 01ac 756E7369 		.ascii	"unsigned int\000"
+ 1271      676E6564 
+ 1271      20696E74 
+ 1271      00
+ 1272              	.LASF10:
+ 1273 01b9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1273      206C6F6E 
+ 1273      6720756E 
+ 1273      7369676E 
+ 1273      65642069 
+ 1274              	.LASF12:
+ 1275 01d0 75696E74 		.ascii	"uint8_t\000"
+ 1275      385F7400 
+ 1276              	.LASF13:
+ 1277 01d8 696E7431 		.ascii	"int16_t\000"
+ 1277      365F7400 
+ 1278              	.LASF36:
+ 1279 01e0 50574D5F 		.ascii	"PWM_LED_Stop\000"
+ 1279      4C45445F 
+ 1279      53746F70 
+ 1279      00
+ 1280              	.LASF35:
+ 1281 01ed 55415254 		.ascii	"UART_1_GetChar\000"
+ 1281      5F315F47 
+ 1281      65744368 
+ 1281      617200
+ 1282              	.LASF33:
+ 1283 01fc 63685F72 		.ascii	"ch_received\000"
+ 1283      65636569 
+ 1283      76656400 
+ 1284              	.LASF23:
+ 1285 0208 73697A65 		.ascii	"sizetype\000"
+ 1285      74797065 
+ 1285      00
+ 1286              	.LASF48:
+ 1287 0211 6572726F 		.ascii	"error\000"
+ 1287      7200
+ 1288              	.LASF9:
+ 1289 0217 6C6F6E67 		.ascii	"long long int\000"
+ 1289      206C6F6E 
+ 1289      6720696E 
+ 1289      7400
+ 1290              	.LASF46:
+ 1291 0225 496E7465 		.ascii	"InterruptRoutine.c\000"
+ 1291      72727570 
+ 1291      74526F75 
+ 1291      74696E65 
+ 1291      2E6300
+ 1292              	.LASF24:
+ 1293 0238 43757374 		.ascii	"Custom_ISR_RX\000"
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 27
+
+
+ 1293      6F6D5F49 
+ 1293      53525F52 
+ 1293      5800
+ 1294              	.LASF41:
+ 1295 0246 4C45445F 		.ascii	"LED_R_Write\000"
+ 1295      525F5772 
+ 1295      69746500 
+ 1296              	.LASF37:
+ 1297 0252 4C45445F 		.ascii	"LED_G_Write\000"
+ 1297      475F5772 
+ 1297      69746500 
+ 1298              	.LASF15:
+ 1299 025e 75696E74 		.ascii	"uint8\000"
+ 1299      3800
+ 1300              	.LASF19:
+ 1301 0264 4E4F5F45 		.ascii	"NO_ERROR\000"
+ 1301      52524F52 
+ 1301      00
+ 1302              	.LASF20:
+ 1303 026d 4552524F 		.ascii	"ERROR\000"
+ 1303      5200
+ 1304              	.LASF18:
+ 1305 0273 63686172 		.ascii	"char\000"
+ 1305      00
+ 1306              	.LASF27:
+ 1307 0278 44617461 		.ascii	"DataBuffer\000"
+ 1307      42756666 
+ 1307      657200
+ 1308              	.LASF22:
+ 1309 0283 6C6F6E67 		.ascii	"long double\000"
+ 1309      20646F75 
+ 1309      626C6500 
+ 1310              	.LASF0:
+ 1311 028f 7369676E 		.ascii	"signed char\000"
+ 1311      65642063 
+ 1311      68617200 
+ 1312              	.LASF44:
+ 1313 029b 55415254 		.ascii	"UART_1_PutString\000"
+ 1313      5F315F50 
+ 1313      75745374 
+ 1313      72696E67 
+ 1313      00
+ 1314              	.LASF39:
+ 1315 02ac 42555A5A 		.ascii	"BUZZER_Write\000"
+ 1315      45525F57 
+ 1315      72697465 
+ 1315      00
+ 1316              	.LASF47:
+ 1317 02b9 433A5C55 		.ascii	"C:\\Users\\Giovanni\\Desktop\\AY2324_II_Project-1\\"
+ 1317      73657273 
+ 1317      5C47696F 
+ 1317      76616E6E 
+ 1317      695C4465 
+ 1318 02e7 50536F43 		.ascii	"PSoC_CODE\\GatheringData\\06-Read_ACC_Data_BCP.cyds"
+ 1318      5F434F44 
+ 1318      455C4761 
+ 1318      74686572 
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccpKukKf.s 			page 28
+
+
+ 1318      696E6744 
+ 1319 0318 6E00     		.ascii	"n\000"
+ 1320              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

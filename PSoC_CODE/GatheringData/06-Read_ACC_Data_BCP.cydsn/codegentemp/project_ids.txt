@@ -1,0 +1,7 @@
+C:\Users\Giovanni\Desktop\AY2324_II_Project-1\PSoC_CODE\GatheringData\06-Read_ACC_Data_BCP.cydsn\06-Read_ACC_Data_BCP.cyprj|257ed4df-cdf3-4bb7-b632-3652ee01a588
+D:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|58e059d4-8274-42c2-bb60-e251b7faa92e
+C:\Users\Giovanni\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|7503e0aa-bea1-4945-b428-d34332159688
+D:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9c95aeb1-c7f6-4644-924c-8eb8773ee48f
+D:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fb319e4e-43fa-4e11-afb5-76157765c797
+D:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|dc2594d2-087f-426a-b4bd-b9d8bf552456
+C:\Users\Giovanni\Desktop\AY2324_II_Project-1\PSoC_CODE\GatheringData\06-Read_ACC_Data_BCP.cydsn\Read_Acc_Data_XYZ.cydsn\Read_Acc_Data_XYZ.cyprj|4a43d638-944f-4e8f-bbf2-716e32d653af

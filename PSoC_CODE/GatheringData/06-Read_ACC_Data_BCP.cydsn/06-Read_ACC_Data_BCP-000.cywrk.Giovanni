@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Source Files\InterruptRoutine.c">
+<ExpandedNodeIds>
+<v>06-Read_ACC_Data_BCP-000</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\TopDesign</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\Pins</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\Analog</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\Clocks</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\Interrupts</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\DMA</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\System</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\Directives</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\Flash Security</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.cydwr\EEPROM</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Header Files</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Header Files\cyapicallbacks.h</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Header Files\ErrorCodes.h</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Header Files\I2C_Interface.h</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Header Files\InterruptRoutine.h</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Header Files\LIS3DH.h</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Source Files</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Source Files\I2C_Interface.c</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Source Files\InterruptRoutine.c</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Source Files\main.c</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Generated_Source</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\Generated_Source\PSoC5</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\TopDesign</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>06-Read_ACC_Data_BCP-000</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\TopDesign</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>06-Read_ACC_Data_BCP-000</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\BUZZER.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\CLOCK_LED_PWM.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Interface.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_BOOT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_INT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_MASTER.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_PM.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_SLAVE.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\InterruptRoutine.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_DATA.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_STREAM.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_B.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_G.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_R.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_INT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_LED.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_LED_PM.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\06-Read_ACC_Data_BCP.elf</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\06-Read_ACC_Data_BCP.hex</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CortexM3\ARM_GCC_541\Debug\06-Read_ACC_Data_BCP.map</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.gpdsc</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP.rpt</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\06-Read_ACC_Data_BCP_timing.html</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Interface.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_BOOT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_INT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_MASTER.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_PM.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_Master_SLAVE.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\InterruptRoutines.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_DATA.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_INT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Read_Acc_Data_XYZ.elf</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Read_Acc_Data_XYZ.hex</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CortexM3\ARM_GCC_541\Debug\Read_Acc_Data_XYZ.map</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\Read_Acc_Data_XYZ.gpdsc</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>06-Read_ACC_Data_BCP-000</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\PSoC 5LP Architecture TRM</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\CY8C58LP Family Datasheet</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\System Reference Guides</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\System Reference Guides\cy_boot_v6_0</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\cy_clock_v2_20.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\cy_isr_v1_70</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\cy_pins_v2_20</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\I2C_v3_50.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\PWM_v3_30.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\06-Read_ACC_Data_BCP\UART_v2_50.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\PSoC 5LP Architecture TRM</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\CY8C58LP Family Datasheet</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\System Reference Guides</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\System Reference Guides\cy_boot_v6_0</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\cy_clock_v2_20.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\cy_isr_v1_70</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\cy_pins_v2_20</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\I2C_v3_50.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\PWM_v3_30.pdf</v>
+<v>06-Read_ACC_Data_BCP-000\Read_Acc_Data_XYZ\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\InterruptRoutine.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1540, 715" SelectedTabbedMdiWindow="995b43d0-8f18-4e47-9a59-0c2a9610a1e0"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a41edbe5-19a6-40a8-a303-d06c066a1481" /><DocumentWindow Key="C:\Users\Giovanni\Desktop\AY2324_II_Project-1\PSoC_CODE\GatheringData\06-Read_ACC_Data_BCP.cydsn\InterruptRoutine.c" Guid="995b43d0-8f18-4e47-9a59-0c2a9610a1e0" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

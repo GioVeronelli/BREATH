@@ -1,0 +1,1435 @@
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 896
+  28              	cy_meta_configecc:
+  29 0000 01       		.byte	1
+  30 0001 45       		.byte	69
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 03       		.byte	3
+  34 0005 65       		.byte	101
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 03       		.byte	3
+  38 0009 15       		.byte	21
+  39 000a 01       		.byte	1
+  40 000b 40       		.byte	64
+  41 000c 02       		.byte	2
+  42 000d 17       		.byte	23
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 14       		.byte	20
+  46 0011 18       		.byte	24
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 3F       		.byte	63
+  50 0015 19       		.byte	25
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 70       		.byte	112
+  54 0019 1A       		.byte	26
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 52       		.byte	82
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 2
+
+
+  58 001d 1B       		.byte	27
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 02       		.byte	2
+  62 0021 42       		.byte	66
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 01       		.byte	1
+  66 0025 43       		.byte	67
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 05       		.byte	5
+  70 0029 48       		.byte	72
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 0F       		.byte	15
+  74 002d 49       		.byte	73
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 0A       		.byte	10
+  78 0031 4C       		.byte	76
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 0C       		.byte	12
+  82 0035 4D       		.byte	77
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 02       		.byte	2
+  86 0039 50       		.byte	80
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 01       		.byte	1
+  90 003d 51       		.byte	81
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 13       		.byte	19
+  94 0041 01       		.byte	1
+  95 0042 88       		.byte	-120
+  96 0043 72       		.byte	114
+  97 0044 89       		.byte	-119
+  98 0045 38       		.byte	56
+  99 0046 8B       		.byte	-117
+ 100 0047 0F       		.byte	15
+ 101 0048 E0       		.byte	-32
+ 102 0049 08       		.byte	8
+ 103 004a E4       		.byte	-28
+ 104 004b 01       		.byte	1
+ 105 004c EA       		.byte	-22
+ 106 004d 01       		.byte	1
+ 107 004e E2       		.byte	-30
+ 108 004f 04       		.byte	4
+ 109 0050 E6       		.byte	-26
+ 110 0051 08       		.byte	8
+ 111 0052 86       		.byte	-122
+ 112 0053 04       		.byte	4
+ 113 0054 8A       		.byte	-118
+ 114 0055 02       		.byte	2
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 3
+
+
+ 115 0056 92       		.byte	-110
+ 116 0057 04       		.byte	4
+ 117 0058 9A       		.byte	-102
+ 118 0059 02       		.byte	2
+ 119 005a A4       		.byte	-92
+ 120 005b 01       		.byte	1
+ 121 005c A8       		.byte	-88
+ 122 005d 01       		.byte	1
+ 123 005e A9       		.byte	-87
+ 124 005f 01       		.byte	1
+ 125 0060 AC       		.byte	-84
+ 126 0061 01       		.byte	1
+ 127 0062 B0       		.byte	-80
+ 128 0063 02       		.byte	2
+ 129 0064 B2       		.byte	-78
+ 130 0065 04       		.byte	4
+ 131 0066 B5       		.byte	-75
+ 132 0067 01       		.byte	1
+ 133 0068 B6       		.byte	-74
+ 134 0069 01       		.byte	1
+ 135 006a BB       		.byte	-69
+ 136 006b 02       		.byte	2
+ 137 006c BE       		.byte	-66
+ 138 006d 05       		.byte	5
+ 139 006e BF       		.byte	-65
+ 140 006f 10       		.byte	16
+ 141 0070 D4       		.byte	-44
+ 142 0071 18       		.byte	24
+ 143 0072 D8       		.byte	-40
+ 144 0073 04       		.byte	4
+ 145 0074 D9       		.byte	-39
+ 146 0075 04       		.byte	4
+ 147 0076 DB       		.byte	-37
+ 148 0077 04       		.byte	4
+ 149 0078 DF       		.byte	-33
+ 150 0079 01       		.byte	1
+ 151 007a 00       		.byte	0
+ 152 007b 10       		.byte	16
+ 153 007c 03       		.byte	3
+ 154 007d 20       		.byte	32
+ 155 007e 04       		.byte	4
+ 156 007f 80       		.byte	-128
+ 157 0080 05       		.byte	5
+ 158 0081 0C       		.byte	12
+ 159 0082 06       		.byte	6
+ 160 0083 80       		.byte	-128
+ 161 0084 07       		.byte	7
+ 162 0085 04       		.byte	4
+ 163 0086 09       		.byte	9
+ 164 0087 01       		.byte	1
+ 165 0088 0B       		.byte	11
+ 166 0089 04       		.byte	4
+ 167 008a 0D       		.byte	13
+ 168 008b 20       		.byte	32
+ 169 008c 0E       		.byte	14
+ 170 008d 61       		.byte	97
+ 171 008e 10       		.byte	16
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 4
+
+
+ 172 008f 22       		.byte	34
+ 173 0090 11       		.byte	17
+ 174 0091 10       		.byte	16
+ 175 0092 15       		.byte	21
+ 176 0093 46       		.byte	70
+ 177 0094 17       		.byte	23
+ 178 0095 28       		.byte	40
+ 179 0096 1A       		.byte	26
+ 180 0097 01       		.byte	1
+ 181 0098 1B       		.byte	27
+ 182 0099 45       		.byte	69
+ 183 009a 1C       		.byte	28
+ 184 009b 04       		.byte	4
+ 185 009c 1D       		.byte	29
+ 186 009d 0D       		.byte	13
+ 187 009e 1E       		.byte	30
+ 188 009f 42       		.byte	66
+ 189 00a0 1F       		.byte	31
+ 190 00a1 08       		.byte	8
+ 191 00a2 21       		.byte	33
+ 192 00a3 03       		.byte	3
+ 193 00a4 22       		.byte	34
+ 194 00a5 10       		.byte	16
+ 195 00a6 23       		.byte	35
+ 196 00a7 40       		.byte	64
+ 197 00a8 24       		.byte	36
+ 198 00a9 10       		.byte	16
+ 199 00aa 25       		.byte	37
+ 200 00ab 01       		.byte	1
+ 201 00ac 26       		.byte	38
+ 202 00ad 28       		.byte	40
+ 203 00ae 27       		.byte	39
+ 204 00af 04       		.byte	4
+ 205 00b0 29       		.byte	41
+ 206 00b1 20       		.byte	32
+ 207 00b2 2D       		.byte	45
+ 208 00b3 C8       		.byte	-56
+ 209 00b4 2E       		.byte	46
+ 210 00b5 01       		.byte	1
+ 211 00b6 2F       		.byte	47
+ 212 00b7 04       		.byte	4
+ 213 00b8 35       		.byte	53
+ 214 00b9 01       		.byte	1
+ 215 00ba 37       		.byte	55
+ 216 00bb 14       		.byte	20
+ 217 00bc 3D       		.byte	61
+ 218 00bd 04       		.byte	4
+ 219 00be 3E       		.byte	62
+ 220 00bf 20       		.byte	32
+ 221 00c0 3F       		.byte	63
+ 222 00c1 40       		.byte	64
+ 223 00c2 45       		.byte	69
+ 224 00c3 0A       		.byte	10
+ 225 00c4 47       		.byte	71
+ 226 00c5 40       		.byte	64
+ 227 00c6 4E       		.byte	78
+ 228 00c7 0A       		.byte	10
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 5
+
+
+ 229 00c8 4F       		.byte	79
+ 230 00c9 84       		.byte	-124
+ 231 00ca 57       		.byte	87
+ 232 00cb 20       		.byte	32
+ 233 00cc 5B       		.byte	91
+ 234 00cd 01       		.byte	1
+ 235 00ce 5E       		.byte	94
+ 236 00cf 02       		.byte	2
+ 237 00d0 63       		.byte	99
+ 238 00d1 0A       		.byte	10
+ 239 00d2 6C       		.byte	108
+ 240 00d3 22       		.byte	34
+ 241 00d4 6D       		.byte	109
+ 242 00d5 10       		.byte	16
+ 243 00d6 75       		.byte	117
+ 244 00d7 80       		.byte	-128
+ 245 00d8 76       		.byte	118
+ 246 00d9 20       		.byte	32
+ 247 00da 77       		.byte	119
+ 248 00db 28       		.byte	40
+ 249 00dc 82       		.byte	-126
+ 250 00dd 10       		.byte	16
+ 251 00de C0       		.byte	-64
+ 252 00df F6       		.byte	-10
+ 253 00e0 C2       		.byte	-62
+ 254 00e1 FA       		.byte	-6
+ 255 00e2 C4       		.byte	-60
+ 256 00e3 F7       		.byte	-9
+ 257 00e4 CA       		.byte	-54
+ 258 00e5 F4       		.byte	-12
+ 259 00e6 CC       		.byte	-52
+ 260 00e7 E0       		.byte	-32
+ 261 00e8 CE       		.byte	-50
+ 262 00e9 70       		.byte	112
+ 263 00ea D0       		.byte	-48
+ 264 00eb D0       		.byte	-48
+ 265 00ec D2       		.byte	-46
+ 266 00ed 30       		.byte	48
+ 267 00ee D6       		.byte	-42
+ 268 00ef 81       		.byte	-127
+ 269 00f0 D8       		.byte	-40
+ 270 00f1 0C       		.byte	12
+ 271 00f2 E2       		.byte	-30
+ 272 00f3 04       		.byte	4
+ 273 00f4 E4       		.byte	-28
+ 274 00f5 04       		.byte	4
+ 275 00f6 E6       		.byte	-26
+ 276 00f7 08       		.byte	8
+ 277 00f8 00       		.byte	0
+ 278 00f9 10       		.byte	16
+ 279 00fa 02       		.byte	2
+ 280 00fb 40       		.byte	64
+ 281 00fc 04       		.byte	4
+ 282 00fd 10       		.byte	16
+ 283 00fe 06       		.byte	6
+ 284 00ff AC       		.byte	-84
+ 285 0100 09       		.byte	9
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 6
+
+
+ 286 0101 80       		.byte	-128
+ 287 0102 0A       		.byte	10
+ 288 0103 03       		.byte	3
+ 289 0104 0B       		.byte	11
+ 290 0105 13       		.byte	19
+ 291 0106 0C       		.byte	12
+ 292 0107 0C       		.byte	12
+ 293 0108 0E       		.byte	14
+ 294 0109 71       		.byte	113
+ 295 010a 13       		.byte	19
+ 296 010b 0C       		.byte	12
+ 297 010c 14       		.byte	20
+ 298 010d 14       		.byte	20
+ 299 010e 15       		.byte	21
+ 300 010f 2C       		.byte	44
+ 301 0110 17       		.byte	23
+ 302 0111 43       		.byte	67
+ 303 0112 1C       		.byte	28
+ 304 0113 09       		.byte	9
+ 305 0114 1E       		.byte	30
+ 306 0115 D0       		.byte	-48
+ 307 0116 1F       		.byte	31
+ 308 0117 08       		.byte	8
+ 309 0118 21       		.byte	33
+ 310 0119 71       		.byte	113
+ 311 011a 23       		.byte	35
+ 312 011b 0E       		.byte	14
+ 313 011c 25       		.byte	37
+ 314 011d 71       		.byte	113
+ 315 011e 26       		.byte	38
+ 316 011f 20       		.byte	32
+ 317 0120 27       		.byte	39
+ 318 0121 06       		.byte	6
+ 319 0122 28       		.byte	40
+ 320 0123 DC       		.byte	-36
+ 321 0124 2A       		.byte	42
+ 322 0125 22       		.byte	34
+ 323 0126 30       		.byte	48
+ 324 0127 E0       		.byte	-32
+ 325 0128 31       		.byte	49
+ 326 0129 C0       		.byte	-64
+ 327 012a 33       		.byte	51
+ 328 012b 0F       		.byte	15
+ 329 012c 34       		.byte	52
+ 330 012d 1F       		.byte	31
+ 331 012e 35       		.byte	53
+ 332 012f 30       		.byte	48
+ 333 0130 39       		.byte	57
+ 334 0131 22       		.byte	34
+ 335 0132 3A       		.byte	58
+ 336 0133 02       		.byte	2
+ 337 0134 3B       		.byte	59
+ 338 0135 08       		.byte	8
+ 339 0136 3F       		.byte	63
+ 340 0137 10       		.byte	16
+ 341 0138 40       		.byte	64
+ 342 0139 02       		.byte	2
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 7
+
+
+ 343 013a 45       		.byte	69
+ 344 013b 40       		.byte	64
+ 345 013c 49       		.byte	73
+ 346 013d FF       		.byte	-1
+ 347 013e 4A       		.byte	74
+ 348 013f 07       		.byte	7
+ 349 0140 4B       		.byte	75
+ 350 0141 FF       		.byte	-1
+ 351 0142 4C       		.byte	76
+ 352 0143 40       		.byte	64
+ 353 0144 4D       		.byte	77
+ 354 0145 20       		.byte	32
+ 355 0146 4E       		.byte	78
+ 356 0147 F0       		.byte	-16
+ 357 0148 4F       		.byte	79
+ 358 0149 05       		.byte	5
+ 359 014a 50       		.byte	80
+ 360 014b 08       		.byte	8
+ 361 014c 58       		.byte	88
+ 362 014d 04       		.byte	4
+ 363 014e 59       		.byte	89
+ 364 014f 04       		.byte	4
+ 365 0150 5A       		.byte	90
+ 366 0151 04       		.byte	4
+ 367 0152 5F       		.byte	95
+ 368 0153 01       		.byte	1
+ 369 0154 60       		.byte	96
+ 370 0155 40       		.byte	64
+ 371 0156 61       		.byte	97
+ 372 0157 A8       		.byte	-88
+ 373 0158 62       		.byte	98
+ 374 0159 40       		.byte	64
+ 375 015a 63       		.byte	99
+ 376 015b 20       		.byte	32
+ 377 015c 80       		.byte	-128
+ 378 015d 13       		.byte	19
+ 379 015e 81       		.byte	-127
+ 380 015f 11       		.byte	17
+ 381 0160 82       		.byte	-126
+ 382 0161 04       		.byte	4
+ 383 0162 83       		.byte	-125
+ 384 0163 68       		.byte	104
+ 385 0164 84       		.byte	-124
+ 386 0165 13       		.byte	19
+ 387 0166 85       		.byte	-123
+ 388 0167 03       		.byte	3
+ 389 0168 86       		.byte	-122
+ 390 0169 0C       		.byte	12
+ 391 016a 87       		.byte	-121
+ 392 016b 04       		.byte	4
+ 393 016c 88       		.byte	-120
+ 394 016d 80       		.byte	-128
+ 395 016e 89       		.byte	-119
+ 396 016f 30       		.byte	48
+ 397 0170 8A       		.byte	-118
+ 398 0171 20       		.byte	32
+ 399 0172 8C       		.byte	-116
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 8
+
+
+ 400 0173 40       		.byte	64
+ 401 0174 8D       		.byte	-115
+ 402 0175 03       		.byte	3
+ 403 0176 8E       		.byte	-114
+ 404 0177 20       		.byte	32
+ 405 0178 90       		.byte	-112
+ 406 0179 20       		.byte	32
+ 407 017a 92       		.byte	-110
+ 408 017b C0       		.byte	-64
+ 409 017c 93       		.byte	-109
+ 410 017d 03       		.byte	3
+ 411 017e 94       		.byte	-108
+ 412 017f 0A       		.byte	10
+ 413 0180 95       		.byte	-107
+ 414 0181 22       		.byte	34
+ 415 0182 96       		.byte	-106
+ 416 0183 14       		.byte	20
+ 417 0184 97       		.byte	-105
+ 418 0185 18       		.byte	24
+ 419 0186 98       		.byte	-104
+ 420 0187 E0       		.byte	-32
+ 421 0188 9B       		.byte	-101
+ 422 0189 03       		.byte	3
+ 423 018a 9C       		.byte	-100
+ 424 018b 03       		.byte	3
+ 425 018c 9E       		.byte	-98
+ 426 018d 14       		.byte	20
+ 427 018e A2       		.byte	-94
+ 428 018f 08       		.byte	8
+ 429 0190 A5       		.byte	-91
+ 430 0191 30       		.byte	48
+ 431 0192 A6       		.byte	-90
+ 432 0193 15       		.byte	21
+ 433 0194 A8       		.byte	-88
+ 434 0195 E0       		.byte	-32
+ 435 0196 A9       		.byte	-87
+ 436 0197 03       		.byte	3
+ 437 0198 AF       		.byte	-81
+ 438 0199 03       		.byte	3
+ 439 019a B0       		.byte	-80
+ 440 019b 10       		.byte	16
+ 441 019c B1       		.byte	-79
+ 442 019d 0C       		.byte	12
+ 443 019e B2       		.byte	-78
+ 444 019f 0F       		.byte	15
+ 445 01a0 B3       		.byte	-77
+ 446 01a1 40       		.byte	64
+ 447 01a2 B4       		.byte	-76
+ 448 01a3 E0       		.byte	-32
+ 449 01a4 B5       		.byte	-75
+ 450 01a5 30       		.byte	48
+ 451 01a6 B7       		.byte	-73
+ 452 01a7 03       		.byte	3
+ 453 01a8 BA       		.byte	-70
+ 454 01a9 08       		.byte	8
+ 455 01aa BE       		.byte	-66
+ 456 01ab 01       		.byte	1
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 9
+
+
+ 457 01ac BF       		.byte	-65
+ 458 01ad 01       		.byte	1
+ 459 01ae C0       		.byte	-64
+ 460 01af 23       		.byte	35
+ 461 01b0 C1       		.byte	-63
+ 462 01b1 01       		.byte	1
+ 463 01b2 C5       		.byte	-59
+ 464 01b3 0B       		.byte	11
+ 465 01b4 C6       		.byte	-58
+ 466 01b5 0E       		.byte	14
+ 467 01b6 C7       		.byte	-57
+ 468 01b7 C0       		.byte	-64
+ 469 01b8 C8       		.byte	-56
+ 470 01b9 25       		.byte	37
+ 471 01ba C9       		.byte	-55
+ 472 01bb FF       		.byte	-1
+ 473 01bc CA       		.byte	-54
+ 474 01bd FF       		.byte	-1
+ 475 01be CB       		.byte	-53
+ 476 01bf FF       		.byte	-1
+ 477 01c0 CE       		.byte	-50
+ 478 01c1 F0       		.byte	-16
+ 479 01c2 CF       		.byte	-49
+ 480 01c3 44       		.byte	68
+ 481 01c4 D0       		.byte	-48
+ 482 01c5 0C       		.byte	12
+ 483 01c6 D4       		.byte	-44
+ 484 01c7 01       		.byte	1
+ 485 01c8 D8       		.byte	-40
+ 486 01c9 04       		.byte	4
+ 487 01ca D9       		.byte	-39
+ 488 01cb 04       		.byte	4
+ 489 01cc DA       		.byte	-38
+ 490 01cd 04       		.byte	4
+ 491 01ce DB       		.byte	-37
+ 492 01cf 04       		.byte	4
+ 493 01d0 DF       		.byte	-33
+ 494 01d1 01       		.byte	1
+ 495 01d2 E6       		.byte	-26
+ 496 01d3 C0       		.byte	-64
+ 497 01d4 EA       		.byte	-22
+ 498 01d5 40       		.byte	64
+ 499 01d6 EB       		.byte	-21
+ 500 01d7 02       		.byte	2
+ 501 01d8 01       		.byte	1
+ 502 01d9 22       		.byte	34
+ 503 01da 02       		.byte	2
+ 504 01db 01       		.byte	1
+ 505 01dc 03       		.byte	3
+ 506 01dd 20       		.byte	32
+ 507 01de 05       		.byte	5
+ 508 01df 05       		.byte	5
+ 509 01e0 06       		.byte	6
+ 510 01e1 02       		.byte	2
+ 511 01e2 07       		.byte	7
+ 512 01e3 08       		.byte	8
+ 513 01e4 0A       		.byte	10
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 10
+
+
+ 514 01e5 22       		.byte	34
+ 515 01e6 0C       		.byte	12
+ 516 01e7 20       		.byte	32
+ 517 01e8 0D       		.byte	13
+ 518 01e9 4A       		.byte	74
+ 519 01ea 0F       		.byte	15
+ 520 01eb 02       		.byte	2
+ 521 01ec 12       		.byte	18
+ 522 01ed 10       		.byte	16
+ 523 01ee 13       		.byte	19
+ 524 01ef 20       		.byte	32
+ 525 01f0 15       		.byte	21
+ 526 01f1 12       		.byte	18
+ 527 01f2 16       		.byte	22
+ 528 01f3 10       		.byte	16
+ 529 01f4 19       		.byte	25
+ 530 01f5 21       		.byte	33
+ 531 01f6 1C       		.byte	28
+ 532 01f7 40       		.byte	64
+ 533 01f8 1D       		.byte	29
+ 534 01f9 04       		.byte	4
+ 535 01fa 1E       		.byte	30
+ 536 01fb 04       		.byte	4
+ 537 01fc 21       		.byte	33
+ 538 01fd 19       		.byte	25
+ 539 01fe 22       		.byte	34
+ 540 01ff 01       		.byte	1
+ 541 0200 23       		.byte	35
+ 542 0201 20       		.byte	32
+ 543 0202 25       		.byte	37
+ 544 0203 20       		.byte	32
+ 545 0204 27       		.byte	39
+ 546 0205 59       		.byte	89
+ 547 0206 28       		.byte	40
+ 548 0207 02       		.byte	2
+ 549 0208 29       		.byte	41
+ 550 0209 05       		.byte	5
+ 551 020a 2A       		.byte	42
+ 552 020b 85       		.byte	-123
+ 553 020c 2B       		.byte	43
+ 554 020d 20       		.byte	32
+ 555 020e 2C       		.byte	44
+ 556 020f 20       		.byte	32
+ 557 0210 2E       		.byte	46
+ 558 0211 40       		.byte	64
+ 559 0212 2F       		.byte	47
+ 560 0213 08       		.byte	8
+ 561 0214 30       		.byte	48
+ 562 0215 80       		.byte	-128
+ 563 0216 31       		.byte	49
+ 564 0217 08       		.byte	8
+ 565 0218 32       		.byte	50
+ 566 0219 01       		.byte	1
+ 567 021a 36       		.byte	54
+ 568 021b 22       		.byte	34
+ 569 021c 37       		.byte	55
+ 570 021d 08       		.byte	8
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 11
+
+
+ 571 021e 38       		.byte	56
+ 572 021f 20       		.byte	32
+ 573 0220 3D       		.byte	61
+ 574 0221 10       		.byte	16
+ 575 0222 3E       		.byte	62
+ 576 0223 06       		.byte	6
+ 577 0224 3F       		.byte	63
+ 578 0225 40       		.byte	64
+ 579 0226 41       		.byte	65
+ 580 0227 10       		.byte	16
+ 581 0228 46       		.byte	70
+ 582 0229 15       		.byte	21
+ 583 022a 48       		.byte	72
+ 584 022b 80       		.byte	-128
+ 585 022c 49       		.byte	73
+ 586 022d 02       		.byte	2
+ 587 022e 4E       		.byte	78
+ 588 022f 10       		.byte	16
+ 589 0230 50       		.byte	80
+ 590 0231 10       		.byte	16
+ 591 0232 52       		.byte	82
+ 592 0233 10       		.byte	16
+ 593 0234 56       		.byte	86
+ 594 0235 80       		.byte	-128
+ 595 0236 57       		.byte	87
+ 596 0237 01       		.byte	1
+ 597 0238 5C       		.byte	92
+ 598 0239 46       		.byte	70
+ 599 023a 5E       		.byte	94
+ 600 023b 10       		.byte	16
+ 601 023c 81       		.byte	-127
+ 602 023d 40       		.byte	64
+ 603 023e 82       		.byte	-126
+ 604 023f 10       		.byte	16
+ 605 0240 89       		.byte	-119
+ 606 0241 02       		.byte	2
+ 607 0242 8A       		.byte	-118
+ 608 0243 16       		.byte	22
+ 609 0244 8B       		.byte	-117
+ 610 0245 04       		.byte	4
+ 611 0246 8C       		.byte	-116
+ 612 0247 40       		.byte	64
+ 613 0248 8D       		.byte	-115
+ 614 0249 02       		.byte	2
+ 615 024a 90       		.byte	-112
+ 616 024b 04       		.byte	4
+ 617 024c 91       		.byte	-111
+ 618 024d 10       		.byte	16
+ 619 024e 92       		.byte	-110
+ 620 024f 40       		.byte	64
+ 621 0250 93       		.byte	-109
+ 622 0251 40       		.byte	64
+ 623 0252 94       		.byte	-108
+ 624 0253 80       		.byte	-128
+ 625 0254 97       		.byte	-105
+ 626 0255 08       		.byte	8
+ 627 0256 9D       		.byte	-99
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 12
+
+
+ 628 0257 20       		.byte	32
+ 629 0258 9E       		.byte	-98
+ 630 0259 80       		.byte	-128
+ 631 025a 9F       		.byte	-97
+ 632 025b 51       		.byte	81
+ 633 025c A0       		.byte	-96
+ 634 025d 20       		.byte	32
+ 635 025e A2       		.byte	-94
+ 636 025f 22       		.byte	34
+ 637 0260 A3       		.byte	-93
+ 638 0261 08       		.byte	8
+ 639 0262 A5       		.byte	-91
+ 640 0263 20       		.byte	32
+ 641 0264 A6       		.byte	-90
+ 642 0265 10       		.byte	16
+ 643 0266 C0       		.byte	-64
+ 644 0267 FF       		.byte	-1
+ 645 0268 C2       		.byte	-62
+ 646 0269 F5       		.byte	-11
+ 647 026a C4       		.byte	-60
+ 648 026b 76       		.byte	118
+ 649 026c CA       		.byte	-54
+ 650 026d 73       		.byte	115
+ 651 026e CC       		.byte	-52
+ 652 026f EB       		.byte	-21
+ 653 0270 CE       		.byte	-50
+ 654 0271 F4       		.byte	-12
+ 655 0272 D0       		.byte	-48
+ 656 0273 74       		.byte	116
+ 657 0274 D6       		.byte	-42
+ 658 0275 F0       		.byte	-16
+ 659 0276 E0       		.byte	-32
+ 660 0277 08       		.byte	8
+ 661 0278 E4       		.byte	-28
+ 662 0279 01       		.byte	1
+ 663 027a EA       		.byte	-22
+ 664 027b 01       		.byte	1
+ 665 027c 3E       		.byte	62
+ 666 027d 10       		.byte	16
+ 667 027e CE       		.byte	-50
+ 668 027f 20       		.byte	32
+ 669 0280 96       		.byte	-106
+ 670 0281 10       		.byte	16
+ 671 0282 82       		.byte	-126
+ 672 0283 20       		.byte	32
+ 673 0284 85       		.byte	-123
+ 674 0285 08       		.byte	8
+ 675 0286 96       		.byte	-106
+ 676 0287 10       		.byte	16
+ 677 0288 E2       		.byte	-30
+ 678 0289 20       		.byte	32
+ 679 028a E6       		.byte	-26
+ 680 028b 10       		.byte	16
+ 681 028c 12       		.byte	18
+ 682 028d 20       		.byte	32
+ 683 028e 16       		.byte	22
+ 684 028f 40       		.byte	64
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 13
+
+
+ 685 0290 72       		.byte	114
+ 686 0291 20       		.byte	32
+ 687 0292 75       		.byte	117
+ 688 0293 08       		.byte	8
+ 689 0294 82       		.byte	-126
+ 690 0295 20       		.byte	32
+ 691 0296 86       		.byte	-122
+ 692 0297 40       		.byte	64
+ 693 0298 99       		.byte	-103
+ 694 0299 08       		.byte	8
+ 695 029a 9A       		.byte	-102
+ 696 029b 20       		.byte	32
+ 697 029c AA       		.byte	-86
+ 698 029d 10       		.byte	16
+ 699 029e C4       		.byte	-60
+ 700 029f 30       		.byte	48
+ 701 02a0 DC       		.byte	-36
+ 702 02a1 80       		.byte	-128
+ 703 02a2 DE       		.byte	-34
+ 704 02a3 20       		.byte	32
+ 705 02a4 E0       		.byte	-32
+ 706 02a5 10       		.byte	16
+ 707 02a6 E4       		.byte	-28
+ 708 02a7 80       		.byte	-128
+ 709 02a8 EA       		.byte	-22
+ 710 02a9 80       		.byte	-128
+ 711 02aa 10       		.byte	16
+ 712 02ab 80       		.byte	-128
+ 713 02ac 13       		.byte	19
+ 714 02ad 20       		.byte	32
+ 715 02ae 14       		.byte	20
+ 716 02af 40       		.byte	64
+ 717 02b0 7B       		.byte	123
+ 718 02b1 10       		.byte	16
+ 719 02b2 7F       		.byte	127
+ 720 02b3 40       		.byte	64
+ 721 02b4 80       		.byte	-128
+ 722 02b5 80       		.byte	-128
+ 723 02b6 81       		.byte	-127
+ 724 02b7 02       		.byte	2
+ 725 02b8 84       		.byte	-124
+ 726 02b9 40       		.byte	64
+ 727 02ba C4       		.byte	-60
+ 728 02bb 0E       		.byte	14
+ 729 02bc DE       		.byte	-34
+ 730 02bd 03       		.byte	3
+ 731 02be 10       		.byte	16
+ 732 02bf 40       		.byte	64
+ 733 02c0 75       		.byte	117
+ 734 02c1 02       		.byte	2
+ 735 02c2 83       		.byte	-125
+ 736 02c3 10       		.byte	16
+ 737 02c4 87       		.byte	-121
+ 738 02c5 40       		.byte	64
+ 739 02c6 88       		.byte	-120
+ 740 02c7 40       		.byte	64
+ 741 02c8 97       		.byte	-105
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 14
+
+
+ 742 02c9 80       		.byte	-128
+ 743 02ca 99       		.byte	-103
+ 744 02cb 02       		.byte	2
+ 745 02cc A7       		.byte	-89
+ 746 02cd 10       		.byte	16
+ 747 02ce AB       		.byte	-85
+ 748 02cf 20       		.byte	32
+ 749 02d0 C4       		.byte	-60
+ 750 02d1 08       		.byte	8
+ 751 02d2 DE       		.byte	-34
+ 752 02d3 04       		.byte	4
+ 753 02d4 E2       		.byte	-30
+ 754 02d5 01       		.byte	1
+ 755 02d6 10       		.byte	16
+ 756 02d7 01       		.byte	1
+ 757 02d8 1C       		.byte	28
+ 758 02d9 01       		.byte	1
+ 759 02da 03       		.byte	3
+ 760 02db C0       		.byte	-64
+ 761 02dc 82       		.byte	-126
+ 762 02dd 80       		.byte	-128
+ 763 02de 00       		.byte	0
+ 764 02df 00       		.byte	0
+ 765 02e0 43       		.byte	67
+ 766 02e1 00       		.byte	0
+ 767 02e2 00       		.byte	0
+ 768 02e3 00       		.byte	0
+ 769 02e4 40       		.byte	64
+ 770 02e5 00       		.byte	0
+ 771 02e6 00       		.byte	0
+ 772 02e7 00       		.byte	0
+ 773 02e8 33       		.byte	51
+ 774 02e9 08       		.byte	8
+ 775 02ea 0C       		.byte	12
+ 776 02eb 00       		.byte	0
+ 777 02ec 1C       		.byte	28
+ 778 02ed 18       		.byte	24
+ 779 02ee 23       		.byte	35
+ 780 02ef 00       		.byte	0
+ 781 02f0 03       		.byte	3
+ 782 02f1 7F       		.byte	127
+ 783 02f2 00       		.byte	0
+ 784 02f3 00       		.byte	0
+ 785 02f4 1F       		.byte	31
+ 786 02f5 1C       		.byte	28
+ 787 02f6 20       		.byte	32
+ 788 02f7 61       		.byte	97
+ 789 02f8 01       		.byte	1
+ 790 02f9 3C       		.byte	60
+ 791 02fa 00       		.byte	0
+ 792 02fb 42       		.byte	66
+ 793 02fc 02       		.byte	2
+ 794 02fd 00       		.byte	0
+ 795 02fe 00       		.byte	0
+ 796 02ff 04       		.byte	4
+ 797 0300 00       		.byte	0
+ 798 0301 00       		.byte	0
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 15
+
+
+ 799 0302 23       		.byte	35
+ 800 0303 00       		.byte	0
+ 801 0304 3F       		.byte	63
+ 802 0305 00       		.byte	0
+ 803 0306 00       		.byte	0
+ 804 0307 23       		.byte	35
+ 805 0308 04       		.byte	4
+ 806 0309 67       		.byte	103
+ 807 030a 00       		.byte	0
+ 808 030b 18       		.byte	24
+ 809 030c 0C       		.byte	12
+ 810 030d 04       		.byte	4
+ 811 030e 00       		.byte	0
+ 812 030f 00       		.byte	0
+ 813 0310 08       		.byte	8
+ 814 0311 10       		.byte	16
+ 815 0312 00       		.byte	0
+ 816 0313 00       		.byte	0
+ 817 0314 2C       		.byte	44
+ 818 0315 40       		.byte	64
+ 819 0316 0F       		.byte	15
+ 820 0317 38       		.byte	56
+ 821 0318 40       		.byte	64
+ 822 0319 1F       		.byte	31
+ 823 031a 10       		.byte	16
+ 824 031b 00       		.byte	0
+ 825 031c 00       		.byte	0
+ 826 031d 02       		.byte	2
+ 827 031e 0A       		.byte	10
+ 828 031f 20       		.byte	32
+ 829 0320 00       		.byte	0
+ 830 0321 00       		.byte	0
+ 831 0322 50       		.byte	80
+ 832 0323 00       		.byte	0
+ 833 0324 35       		.byte	53
+ 834 0325 04       		.byte	4
+ 835 0326 06       		.byte	6
+ 836 0327 00       		.byte	0
+ 837 0328 01       		.byte	1
+ 838 0329 0C       		.byte	12
+ 839 032a E0       		.byte	-32
+ 840 032b 00       		.byte	0
+ 841 032c 09       		.byte	9
+ 842 032d FF       		.byte	-1
+ 843 032e FF       		.byte	-1
+ 844 032f FF       		.byte	-1
+ 845 0330 62       		.byte	98
+ 846 0331 A0       		.byte	-96
+ 847 0332 F0       		.byte	-16
+ 848 0333 41       		.byte	65
+ 849 0334 0C       		.byte	12
+ 850 0335 00       		.byte	0
+ 851 0336 00       		.byte	0
+ 852 0337 00       		.byte	0
+ 853 0338 00       		.byte	0
+ 854 0339 00       		.byte	0
+ 855 033a 02       		.byte	2
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 16
+
+
+ 856 033b 13       		.byte	19
+ 857 033c 04       		.byte	4
+ 858 033d 04       		.byte	4
+ 859 033e 04       		.byte	4
+ 860 033f 04       		.byte	4
+ 861 0340 00       		.byte	0
+ 862 0341 00       		.byte	0
+ 863 0342 00       		.byte	0
+ 864 0343 01       		.byte	1
+ 865 0344 00       		.byte	0
+ 866 0345 00       		.byte	0
+ 867 0346 00       		.byte	0
+ 868 0347 00       		.byte	0
+ 869 0348 00       		.byte	0
+ 870 0349 00       		.byte	0
+ 871 034a 40       		.byte	64
+ 872 034b 02       		.byte	2
+ 873 034c 00       		.byte	0
+ 874 034d 10       		.byte	16
+ 875 034e 30       		.byte	48
+ 876 034f 10       		.byte	16
+ 877 0350 00       		.byte	0
+ 878 0351 10       		.byte	16
+ 879 0352 10       		.byte	16
+ 880 0353 12       		.byte	18
+ 881 0354 00       		.byte	0
+ 882 0355 00       		.byte	0
+ 883 0356 00       		.byte	0
+ 884 0357 00       		.byte	0
+ 885 0358 00       		.byte	0
+ 886 0359 00       		.byte	0
+ 887 035a 00       		.byte	0
+ 888 035b 00       		.byte	0
+ 889 035c 00       		.byte	0
+ 890 035d 00       		.byte	0
+ 891 035e 00       		.byte	0
+ 892 035f 00       		.byte	0
+ 893 0360 00       		.byte	0
+ 894 0361 00       		.byte	0
+ 895 0362 00       		.byte	0
+ 896 0363 00       		.byte	0
+ 897 0364 83       		.byte	-125
+ 898 0365 00       		.byte	0
+ 899 0366 40       		.byte	64
+ 900 0367 80       		.byte	-128
+ 901 0368 83       		.byte	-125
+ 902 0369 00       		.byte	0
+ 903 036a 83       		.byte	-125
+ 904 036b 00       		.byte	0
+ 905 036c 00       		.byte	0
+ 906 036d 00       		.byte	0
+ 907 036e 00       		.byte	0
+ 908 036f 00       		.byte	0
+ 909 0370 00       		.byte	0
+ 910 0371 0B       		.byte	11
+ 911 0372 0B       		.byte	11
+ 912 0373 00       		.byte	0
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 17
+
+
+ 913 0374 00       		.byte	0
+ 914 0375 00       		.byte	0
+ 915 0376 00       		.byte	0
+ 916 0377 00       		.byte	0
+ 917 0378 08       		.byte	8
+ 918 0379 00       		.byte	0
+ 919 037a 00       		.byte	0
+ 920 037b 00       		.byte	0
+ 921 037c 00       		.byte	0
+ 922 037d 00       		.byte	0
+ 923 037e 00       		.byte	0
+ 924 037f 00       		.byte	0
+ 925              		.section	.cywolatch,"a",%progbits
+ 926              		.align	2
+ 927              		.type	cy_meta_wonvl, %object
+ 928              		.size	cy_meta_wonvl, 4
+ 929              	cy_meta_wonvl:
+ 930 0000 BC       		.byte	-68
+ 931 0001 90       		.byte	-112
+ 932 0002 AC       		.byte	-84
+ 933 0003 AF       		.byte	-81
+ 934              		.section	.cycustnvl,"a",%progbits
+ 935              		.align	2
+ 936              		.type	cy_meta_custnvl, %object
+ 937              		.size	cy_meta_custnvl, 4
+ 938              	cy_meta_custnvl:
+ 939 0000 00       		.byte	0
+ 940 0001 00       		.byte	0
+ 941 0002 40       		.byte	64
+ 942 0003 05       		.byte	5
+ 943              		.section	.cymeta,"a",%progbits
+ 944              		.align	2
+ 945              		.type	cy_metadata, %object
+ 946              		.size	cy_metadata, 12
+ 947              	cy_metadata:
+ 948 0000 00       		.byte	0
+ 949 0001 01       		.byte	1
+ 950 0002 2E       		.byte	46
+ 951 0003 16       		.byte	22
+ 952 0004 10       		.byte	16
+ 953 0005 69       		.byte	105
+ 954 0006 00       		.byte	0
+ 955 0007 01       		.byte	1
+ 956 0008 00       		.byte	0
+ 957 0009 00       		.byte	0
+ 958 000a 00       		.byte	0
+ 959 000b 00       		.byte	0
+ 960              		.section	.cyflashprotect,"a",%progbits
+ 961              		.align	2
+ 962              		.type	cy_meta_flashprotect, %object
+ 963              		.size	cy_meta_flashprotect, 256
+ 964              	cy_meta_flashprotect:
+ 965 0000 00000000 		.space	256
+ 965      00000000 
+ 965      00000000 
+ 965      00000000 
+ 965      00000000 
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 18
+
+
+ 966              		.text
+ 967              	.Letext0:
+ 968              		.file 1 "d:\\programmi\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 969              		.file 2 "d:\\programmi\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 970              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 971              		.section	.debug_info,"",%progbits
+ 972              	.Ldebug_info0:
+ 973 0000 31010000 		.4byte	0x131
+ 974 0004 0400     		.2byte	0x4
+ 975 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 976 000a 04       		.byte	0x4
+ 977 000b 01       		.uleb128 0x1
+ 978 000c 9D000000 		.4byte	.LASF17
+ 979 0010 0C       		.byte	0xc
+ 980 0011 F7010000 		.4byte	.LASF18
+ 981 0015 00000000 		.4byte	.LASF19
+ 982 0019 00000000 		.4byte	.Ldebug_line0
+ 983 001d 02       		.uleb128 0x2
+ 984 001e 01       		.byte	0x1
+ 985 001f 06       		.byte	0x6
+ 986 0020 EB010000 		.4byte	.LASF0
+ 987 0024 03       		.uleb128 0x3
+ 988 0025 79000000 		.4byte	.LASF9
+ 989 0029 01       		.byte	0x1
+ 990 002a 1D       		.byte	0x1d
+ 991 002b 2F000000 		.4byte	0x2f
+ 992 002f 02       		.uleb128 0x2
+ 993 0030 01       		.byte	0x1
+ 994 0031 08       		.byte	0x8
+ 995 0032 8F000000 		.4byte	.LASF1
+ 996 0036 02       		.uleb128 0x2
+ 997 0037 02       		.byte	0x2
+ 998 0038 05       		.byte	0x5
+ 999 0039 D8010000 		.4byte	.LASF2
+ 1000 003d 02       		.uleb128 0x2
+ 1001 003e 02       		.byte	0x2
+ 1002 003f 07       		.byte	0x7
+ 1003 0040 3D010000 		.4byte	.LASF3
+ 1004 0044 02       		.uleb128 0x2
+ 1005 0045 04       		.byte	0x4
+ 1006 0046 05       		.byte	0x5
+ 1007 0047 E2010000 		.4byte	.LASF4
+ 1008 004b 02       		.uleb128 0x2
+ 1009 004c 04       		.byte	0x4
+ 1010 004d 07       		.byte	0x7
+ 1011 004e 2B010000 		.4byte	.LASF5
+ 1012 0052 02       		.uleb128 0x2
+ 1013 0053 08       		.byte	0x8
+ 1014 0054 05       		.byte	0x5
+ 1015 0055 CA010000 		.4byte	.LASF6
+ 1016 0059 02       		.uleb128 0x2
+ 1017 005a 08       		.byte	0x8
+ 1018 005b 07       		.byte	0x7
+ 1019 005c 7F010000 		.4byte	.LASF7
+ 1020 0060 04       		.uleb128 0x4
+ 1021 0061 04       		.byte	0x4
+ 1022 0062 05       		.byte	0x5
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 19
+
+
+ 1023 0063 696E7400 		.ascii	"int\000"
+ 1024 0067 02       		.uleb128 0x2
+ 1025 0068 04       		.byte	0x4
+ 1026 0069 07       		.byte	0x7
+ 1027 006a 72010000 		.4byte	.LASF8
+ 1028 006e 03       		.uleb128 0x3
+ 1029 006f 96010000 		.4byte	.LASF10
+ 1030 0073 02       		.byte	0x2
+ 1031 0074 18       		.byte	0x18
+ 1032 0075 24000000 		.4byte	0x24
+ 1033 0079 05       		.uleb128 0x5
+ 1034 007a 91000000 		.4byte	0x91
+ 1035 007e 8A000000 		.4byte	0x8a
+ 1036 0082 06       		.uleb128 0x6
+ 1037 0083 8A000000 		.4byte	0x8a
+ 1038 0087 7F03     		.2byte	0x37f
+ 1039 0089 00       		.byte	0
+ 1040 008a 02       		.uleb128 0x2
+ 1041 008b 04       		.byte	0x4
+ 1042 008c 07       		.byte	0x7
+ 1043 008d C1010000 		.4byte	.LASF11
+ 1044 0091 07       		.uleb128 0x7
+ 1045 0092 6E000000 		.4byte	0x6e
+ 1046 0096 08       		.uleb128 0x8
+ 1047 0097 60010000 		.4byte	.LASF12
+ 1048 009b 03       		.byte	0x3
+ 1049 009c 1F       		.byte	0x1f
+ 1050 009d A7000000 		.4byte	0xa7
+ 1051 00a1 05       		.uleb128 0x5
+ 1052 00a2 03       		.byte	0x3
+ 1053 00a3 00000000 		.4byte	cy_meta_configecc
+ 1054 00a7 07       		.uleb128 0x7
+ 1055 00a8 79000000 		.4byte	0x79
+ 1056 00ac 05       		.uleb128 0x5
+ 1057 00ad 91000000 		.4byte	0x91
+ 1058 00b1 BC000000 		.4byte	0xbc
+ 1059 00b5 09       		.uleb128 0x9
+ 1060 00b6 8A000000 		.4byte	0x8a
+ 1061 00ba 03       		.byte	0x3
+ 1062 00bb 00       		.byte	0
+ 1063 00bc 08       		.uleb128 0x8
+ 1064 00bd 50010000 		.4byte	.LASF13
+ 1065 00c1 03       		.byte	0x3
+ 1066 00c2 9C       		.byte	0x9c
+ 1067 00c3 CD000000 		.4byte	0xcd
+ 1068 00c7 05       		.uleb128 0x5
+ 1069 00c8 03       		.byte	0x3
+ 1070 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1071 00cd 07       		.uleb128 0x7
+ 1072 00ce AC000000 		.4byte	0xac
+ 1073 00d2 08       		.uleb128 0x8
+ 1074 00d3 B3010000 		.4byte	.LASF14
+ 1075 00d7 03       		.byte	0x3
+ 1076 00d8 AA       		.byte	0xaa
+ 1077 00d9 E3000000 		.4byte	0xe3
+ 1078 00dd 05       		.uleb128 0x5
+ 1079 00de 03       		.byte	0x3
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 20
+
+
+ 1080 00df 00000000 		.4byte	cy_meta_wonvl
+ 1081 00e3 07       		.uleb128 0x7
+ 1082 00e4 AC000000 		.4byte	0xac
+ 1083 00e8 05       		.uleb128 0x5
+ 1084 00e9 91000000 		.4byte	0x91
+ 1085 00ed F8000000 		.4byte	0xf8
+ 1086 00f1 09       		.uleb128 0x9
+ 1087 00f2 8A000000 		.4byte	0x8a
+ 1088 00f6 FF       		.byte	0xff
+ 1089 00f7 00       		.byte	0
+ 1090 00f8 08       		.uleb128 0x8
+ 1091 00f9 9E010000 		.4byte	.LASF15
+ 1092 00fd 03       		.byte	0x3
+ 1093 00fe B8       		.byte	0xb8
+ 1094 00ff 09010000 		.4byte	0x109
+ 1095 0103 05       		.uleb128 0x5
+ 1096 0104 03       		.byte	0x3
+ 1097 0105 00000000 		.4byte	cy_meta_flashprotect
+ 1098 0109 07       		.uleb128 0x7
+ 1099 010a E8000000 		.4byte	0xe8
+ 1100 010e 05       		.uleb128 0x5
+ 1101 010f 91000000 		.4byte	0x91
+ 1102 0113 1E010000 		.4byte	0x11e
+ 1103 0117 09       		.uleb128 0x9
+ 1104 0118 8A000000 		.4byte	0x8a
+ 1105 011c 0B       		.byte	0xb
+ 1106 011d 00       		.byte	0
+ 1107 011e 08       		.uleb128 0x8
+ 1108 011f 83000000 		.4byte	.LASF16
+ 1109 0123 03       		.byte	0x3
+ 1110 0124 E5       		.byte	0xe5
+ 1111 0125 2F010000 		.4byte	0x12f
+ 1112 0129 05       		.uleb128 0x5
+ 1113 012a 03       		.byte	0x3
+ 1114 012b 00000000 		.4byte	cy_metadata
+ 1115 012f 07       		.uleb128 0x7
+ 1116 0130 0E010000 		.4byte	0x10e
+ 1117 0134 00       		.byte	0
+ 1118              		.section	.debug_abbrev,"",%progbits
+ 1119              	.Ldebug_abbrev0:
+ 1120 0000 01       		.uleb128 0x1
+ 1121 0001 11       		.uleb128 0x11
+ 1122 0002 01       		.byte	0x1
+ 1123 0003 25       		.uleb128 0x25
+ 1124 0004 0E       		.uleb128 0xe
+ 1125 0005 13       		.uleb128 0x13
+ 1126 0006 0B       		.uleb128 0xb
+ 1127 0007 03       		.uleb128 0x3
+ 1128 0008 0E       		.uleb128 0xe
+ 1129 0009 1B       		.uleb128 0x1b
+ 1130 000a 0E       		.uleb128 0xe
+ 1131 000b 10       		.uleb128 0x10
+ 1132 000c 17       		.uleb128 0x17
+ 1133 000d 00       		.byte	0
+ 1134 000e 00       		.byte	0
+ 1135 000f 02       		.uleb128 0x2
+ 1136 0010 24       		.uleb128 0x24
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 21
+
+
+ 1137 0011 00       		.byte	0
+ 1138 0012 0B       		.uleb128 0xb
+ 1139 0013 0B       		.uleb128 0xb
+ 1140 0014 3E       		.uleb128 0x3e
+ 1141 0015 0B       		.uleb128 0xb
+ 1142 0016 03       		.uleb128 0x3
+ 1143 0017 0E       		.uleb128 0xe
+ 1144 0018 00       		.byte	0
+ 1145 0019 00       		.byte	0
+ 1146 001a 03       		.uleb128 0x3
+ 1147 001b 16       		.uleb128 0x16
+ 1148 001c 00       		.byte	0
+ 1149 001d 03       		.uleb128 0x3
+ 1150 001e 0E       		.uleb128 0xe
+ 1151 001f 3A       		.uleb128 0x3a
+ 1152 0020 0B       		.uleb128 0xb
+ 1153 0021 3B       		.uleb128 0x3b
+ 1154 0022 0B       		.uleb128 0xb
+ 1155 0023 49       		.uleb128 0x49
+ 1156 0024 13       		.uleb128 0x13
+ 1157 0025 00       		.byte	0
+ 1158 0026 00       		.byte	0
+ 1159 0027 04       		.uleb128 0x4
+ 1160 0028 24       		.uleb128 0x24
+ 1161 0029 00       		.byte	0
+ 1162 002a 0B       		.uleb128 0xb
+ 1163 002b 0B       		.uleb128 0xb
+ 1164 002c 3E       		.uleb128 0x3e
+ 1165 002d 0B       		.uleb128 0xb
+ 1166 002e 03       		.uleb128 0x3
+ 1167 002f 08       		.uleb128 0x8
+ 1168 0030 00       		.byte	0
+ 1169 0031 00       		.byte	0
+ 1170 0032 05       		.uleb128 0x5
+ 1171 0033 01       		.uleb128 0x1
+ 1172 0034 01       		.byte	0x1
+ 1173 0035 49       		.uleb128 0x49
+ 1174 0036 13       		.uleb128 0x13
+ 1175 0037 01       		.uleb128 0x1
+ 1176 0038 13       		.uleb128 0x13
+ 1177 0039 00       		.byte	0
+ 1178 003a 00       		.byte	0
+ 1179 003b 06       		.uleb128 0x6
+ 1180 003c 21       		.uleb128 0x21
+ 1181 003d 00       		.byte	0
+ 1182 003e 49       		.uleb128 0x49
+ 1183 003f 13       		.uleb128 0x13
+ 1184 0040 2F       		.uleb128 0x2f
+ 1185 0041 05       		.uleb128 0x5
+ 1186 0042 00       		.byte	0
+ 1187 0043 00       		.byte	0
+ 1188 0044 07       		.uleb128 0x7
+ 1189 0045 26       		.uleb128 0x26
+ 1190 0046 00       		.byte	0
+ 1191 0047 49       		.uleb128 0x49
+ 1192 0048 13       		.uleb128 0x13
+ 1193 0049 00       		.byte	0
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 22
+
+
+ 1194 004a 00       		.byte	0
+ 1195 004b 08       		.uleb128 0x8
+ 1196 004c 34       		.uleb128 0x34
+ 1197 004d 00       		.byte	0
+ 1198 004e 03       		.uleb128 0x3
+ 1199 004f 0E       		.uleb128 0xe
+ 1200 0050 3A       		.uleb128 0x3a
+ 1201 0051 0B       		.uleb128 0xb
+ 1202 0052 3B       		.uleb128 0x3b
+ 1203 0053 0B       		.uleb128 0xb
+ 1204 0054 49       		.uleb128 0x49
+ 1205 0055 13       		.uleb128 0x13
+ 1206 0056 3F       		.uleb128 0x3f
+ 1207 0057 19       		.uleb128 0x19
+ 1208 0058 02       		.uleb128 0x2
+ 1209 0059 18       		.uleb128 0x18
+ 1210 005a 00       		.byte	0
+ 1211 005b 00       		.byte	0
+ 1212 005c 09       		.uleb128 0x9
+ 1213 005d 21       		.uleb128 0x21
+ 1214 005e 00       		.byte	0
+ 1215 005f 49       		.uleb128 0x49
+ 1216 0060 13       		.uleb128 0x13
+ 1217 0061 2F       		.uleb128 0x2f
+ 1218 0062 0B       		.uleb128 0xb
+ 1219 0063 00       		.byte	0
+ 1220 0064 00       		.byte	0
+ 1221 0065 00       		.byte	0
+ 1222              		.section	.debug_aranges,"",%progbits
+ 1223 0000 14000000 		.4byte	0x14
+ 1224 0004 0200     		.2byte	0x2
+ 1225 0006 00000000 		.4byte	.Ldebug_info0
+ 1226 000a 04       		.byte	0x4
+ 1227 000b 00       		.byte	0
+ 1228 000c 0000     		.2byte	0
+ 1229 000e 0000     		.2byte	0
+ 1230 0010 00000000 		.4byte	0
+ 1231 0014 00000000 		.4byte	0
+ 1232              		.section	.debug_line,"",%progbits
+ 1233              	.Ldebug_line0:
+ 1234 0000 29010000 		.section	.debug_str,"MS",%progbits,1
+ 1234      02002301 
+ 1234      00000201 
+ 1234      FB0E0D00 
+ 1234      01010101 
+ 1235              	.LASF19:
+ 1236 0000 433A5C55 		.ascii	"C:\\Users\\Giovanni\\Desktop\\AY2324_II_Project-1\\"
+ 1236      73657273 
+ 1236      5C47696F 
+ 1236      76616E6E 
+ 1236      695C4465 
+ 1237 002e 50536F43 		.ascii	"PSoC_CODE\\GatheringData\\06-Read_ACC_Data_BCP.cyds"
+ 1237      5F434F44 
+ 1237      455C4761 
+ 1237      74686572 
+ 1237      696E6744 
+ 1238 005f 6E5C5265 		.ascii	"n\\Read_Acc_Data_XYZ.cydsn\000"
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 23
+
+
+ 1238      61645F41 
+ 1238      63635F44 
+ 1238      6174615F 
+ 1238      58595A2E 
+ 1239              	.LASF9:
+ 1240 0079 5F5F7569 		.ascii	"__uint8_t\000"
+ 1240      6E74385F 
+ 1240      7400
+ 1241              	.LASF16:
+ 1242 0083 63795F6D 		.ascii	"cy_metadata\000"
+ 1242      65746164 
+ 1242      61746100 
+ 1243              	.LASF1:
+ 1244 008f 756E7369 		.ascii	"unsigned char\000"
+ 1244      676E6564 
+ 1244      20636861 
+ 1244      7200
+ 1245              	.LASF17:
+ 1246 009d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1246      43313120 
+ 1246      352E342E 
+ 1246      31203230 
+ 1246      31363036 
+ 1247 00d0 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1247      20726576 
+ 1247      6973696F 
+ 1247      6E203233 
+ 1247      37373135 
+ 1248 0103 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1248      66756E63 
+ 1248      74696F6E 
+ 1248      2D736563 
+ 1248      74696F6E 
+ 1249              	.LASF5:
+ 1250 012b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1250      20756E73 
+ 1250      69676E65 
+ 1250      6420696E 
+ 1250      7400
+ 1251              	.LASF3:
+ 1252 013d 73686F72 		.ascii	"short unsigned int\000"
+ 1252      7420756E 
+ 1252      7369676E 
+ 1252      65642069 
+ 1252      6E7400
+ 1253              	.LASF13:
+ 1254 0150 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1254      6574615F 
+ 1254      63757374 
+ 1254      6E766C00 
+ 1255              	.LASF12:
+ 1256 0160 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1256      6574615F 
+ 1256      636F6E66 
+ 1256      69676563 
+ 1256      6300
+ 1257              	.LASF8:
+ARM GAS  C:\Users\Giovanni\AppData\Local\Temp\ccAl5BZe.s 			page 24
+
+
+ 1258 0172 756E7369 		.ascii	"unsigned int\000"
+ 1258      676E6564 
+ 1258      20696E74 
+ 1258      00
+ 1259              	.LASF7:
+ 1260 017f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1260      206C6F6E 
+ 1260      6720756E 
+ 1260      7369676E 
+ 1260      65642069 
+ 1261              	.LASF10:
+ 1262 0196 75696E74 		.ascii	"uint8_t\000"
+ 1262      385F7400 
+ 1263              	.LASF15:
+ 1264 019e 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1264      6574615F 
+ 1264      666C6173 
+ 1264      6870726F 
+ 1264      74656374 
+ 1265              	.LASF14:
+ 1266 01b3 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1266      6574615F 
+ 1266      776F6E76 
+ 1266      6C00
+ 1267              	.LASF11:
+ 1268 01c1 73697A65 		.ascii	"sizetype\000"
+ 1268      74797065 
+ 1268      00
+ 1269              	.LASF6:
+ 1270 01ca 6C6F6E67 		.ascii	"long long int\000"
+ 1270      206C6F6E 
+ 1270      6720696E 
+ 1270      7400
+ 1271              	.LASF2:
+ 1272 01d8 73686F72 		.ascii	"short int\000"
+ 1272      7420696E 
+ 1272      7400
+ 1273              	.LASF4:
+ 1274 01e2 6C6F6E67 		.ascii	"long int\000"
+ 1274      20696E74 
+ 1274      00
+ 1275              	.LASF0:
+ 1276 01eb 7369676E 		.ascii	"signed char\000"
+ 1276      65642063 
+ 1276      68617200 
+ 1277              	.LASF18:
+ 1278 01f7 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1278      72617465 
+ 1278      645F536F 
+ 1278      75726365 
+ 1278      5C50536F 
+ 1279              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

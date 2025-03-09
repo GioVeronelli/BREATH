@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+C:\Users\Giovanni\Desktop\AY2324_II_Project-1\PSoC_CODE\GatheringData\06-Read_ACC_Data_BCP.cydsn\06-Read_ACC_Data_BCP.cyprj|179184a8-7d32-444f-8ed6-4d1d5eeeaca4
+D:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|73fc2f08-4626-4d7f-b1ce-fb8566e0c663
+C:\Users\Giovanni\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|b5416044-c7cb-42a2-b898-55796a61f2cf
+D:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|03f66961-497a-457d-80f7-2d904fb8b730
+D:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ac3ec73c-e8ea-4361-8527-d57b49d5c322
+D:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|46901d70-3b43-43a8-af4d-82ed25081e19
+C:\Users\Giovanni\Desktop\AY2324_II_Project-1\PSoC_CODE\GatheringData\06-Read_ACC_Data_BCP.cydsn\Read_Acc_Data_XYZ.cydsn\Read_Acc_Data_XYZ.cyprj|e55409fa-7554-440f-85b4-4dac261ab64a
+=======
+C:\Users\robed\OneDrive - Politecnico di Milano\Desktop\Polimi\2_Anno\2_Semestre\Electronic Lab\PROJECT\PSoC_CODE\GatheringData\06-Read_ACC_Data_BCP.cydsn\06-Read_ACC_Data_BCP.cyprj|4ffb2d99-ce2a-43cf-9826-772caf288f1f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|06bae15e-cb2e-49a6-bfce-20c117c23966
+C:\Users\robed\OneDrive - Politecnico di Milano\Documenti\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|1505cb60-7a1e-48bc-8098-ef48dcfb252e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e985fbbe-08e1-4837-b4bb-d50be23308a5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7906cf60-7389-4550-b371-74a7f298922a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9e610878-2907-4547-8209-94472d8ff982
+C:\Users\robed\OneDrive - Politecnico di Milano\Desktop\Polimi\2_Anno\2_Semestre\Electronic Lab\PROJECT\PSoC_CODE\GatheringData\06-Read_ACC_Data_BCP.cydsn\Read_Acc_Data_XYZ.cydsn\Read_Acc_Data_XYZ.cyprj|24e05567-c189-44d2-9a1f-ddc140a415ed
+C:\Users\robed\OneDrive - Politecnico di Milano\Desktop\AnnotationLibrary\AnnotationLibrary_lib\AnnotationLibrary_lib.cylib\AnnotationLibrary_lib.cyprj|a2531b05-073d-4864-9464-3a916f3e68ac
+>>>>>>> a1b7d34d802777230a6730c25fd6374a5ddf179e

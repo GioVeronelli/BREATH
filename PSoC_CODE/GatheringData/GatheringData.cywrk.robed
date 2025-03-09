@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="GatheringData\01_FIFO">
+<ExpandedNodeIds>
+<v>GatheringData</v>
+<v>GatheringData\01_FIFO\TopDesign</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\Pins</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\Analog</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\Clocks</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\Interrupts</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\DMA</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\System</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\Directives</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\Flash Security</v>
+<v>GatheringData\01_FIFO\01_FIFO.cydwr\EEPROM</v>
+<v>GatheringData\01_FIFO\Header Files</v>
+<v>GatheringData\01_FIFO\Header Files\cyapicallbacks.h</v>
+<v>GatheringData\01_FIFO\Header Files\ErrorCodes.h</v>
+<v>GatheringData\01_FIFO\Header Files\I2C_Interface.h</v>
+<v>GatheringData\01_FIFO\Header Files\InterruptRoutines.h</v>
+<v>GatheringData\01_FIFO\Header Files\LIS3DH.h</v>
+<v>GatheringData\01_FIFO\Source Files</v>
+<v>GatheringData\01_FIFO\Source Files\I2C_Interface.c</v>
+<v>GatheringData\01_FIFO\Source Files\InterruptRoutines.c</v>
+<v>GatheringData\01_FIFO\Source Files\main.c</v>
+<v>GatheringData\01_FIFO\Generated_Source</v>
+<v>GatheringData\01_FIFO\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>GatheringData</v>
+<v>GatheringData\01_FIFO</v>
+<v>GatheringData\01_FIFO\TopDesign</v>
+<v>GatheringData\01_FIFO\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>GatheringData</v>
+<v>GatheringData\01_FIFO</v>
+<v>GatheringData\01_FIFO\01_FIFO.gpdsc</v>
+<v>GatheringData\01_FIFO\01_FIFO.rpt</v>
+<v>GatheringData\01_FIFO\01_FIFO_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>GatheringData</v>
+<v>GatheringData\01_FIFO</v>
+<v>GatheringData\01_FIFO\PSoC 5LP Architecture TRM</v>
+<v>GatheringData\01_FIFO\CY8C58LP Family Datasheet</v>
+<v>GatheringData\01_FIFO\System Reference Guides</v>
+<v>GatheringData\01_FIFO\System Reference Guides\cy_boot_v6_0</v>
+<v>GatheringData\01_FIFO\cy_isr_v1_70.pdf</v>
+<v>GatheringData\01_FIFO\cy_pins_v2_20</v>
+<v>GatheringData\01_FIFO\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>GatheringData\01_FIFO\I2C_v3_50.pdf</v>
+<v>GatheringData\01_FIFO\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs />
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal" /><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
